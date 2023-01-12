@@ -1,0 +1,118 @@
+﻿<Window x:Class="WpfTeam04.Project.WpfBoekenToevoegen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTeam04.Project"
+        mc:Ignorable="d"
+        Title="WpfBoekenToevoegen" Height="800" Width="1000" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="111*"/>
+            <ColumnDefinition Width="24*"/>
+
+        </Grid.ColumnDefinitions>
+        
+        <StackPanel Grid.Column="0" Background="Purple" Margin="0,0,5,0" Grid.RowSpan="2" >
+            <Image Width="80">
+                <Image.Source >
+                    <BitmapImage UriSource="../assets/accountIcon.png"></BitmapImage>
+                </Image.Source>
+            </Image>
+            <Label Name="lblNaamGebuiker" HorizontalAlignment="Center" FontSize="20" Foreground="White">PAGED</Label>
+           
+            
+            <Button x:Name="btnDashboard" Margin="10" Background="White" FontSize="20" >Dashboard</Button>
+            <Button x:Name="btnLogout" Margin="10" Background="White" FontSize="20" Click="btnLogout_Click">Logout</Button>
+            <Button x:Name="btnBoekTerug" Margin="10" Background="White" FontSize="20" Click="btnBoekTerug_Click">Boek terug binnen</Button>
+        </StackPanel>
+        <WrapPanel Grid.Column="2" Grid.RowSpan="2">
+            <Label HorizontalAlignment="Right" FontSize="20">Boek Winkel</Label>
+            <Image Width="80" HorizontalAlignment="Right">
+                <Image.Source>
+                    <BitmapImage UriSource="../Assets/logo.png"></BitmapImage>
+                </Image.Source>
+            </Image>
+        </WrapPanel>
+
+        <StackPanel Grid.Column="1" Grid.ColumnSpan="1" Grid.RowSpan="2">
+            <WrapPanel Orientation="Horizontal" >
+                <StackPanel>
+                    <Label Margin="10 0 0 0">EAN</Label>
+                    <TextBox x:Name="txtboxEAN" FontSize="15" Width="200" HorizontalAlignment="Right"></TextBox>
+                </StackPanel>
+                <StackPanel Margin="10 0 0 0">
+                    <Label FontSize="15">Boek titel</Label>
+                    <TextBox x:Name="txtboxBoekTitel" FontSize="15" Width="200"></TextBox>
+                </StackPanel>
+                <StackPanel Margin="10 0 0 0">
+                    <Label FontSize="15">Author</Label>
+                    <TextBox x:Name="txtboxAuthor" FontSize="15" Width="200"></TextBox>
+                </StackPanel>
+                <StackPanel Margin="10 0 0 0">
+                    <Label FontSize="15">Categories</Label>
+                    <ComboBox x:Name="comBoxCategories" FontSize="15" Background="AliceBlue" Width="200">
+                   
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel Margin="10 0 0 0">
+                    <Label FontSize="15">Prijs</Label>
+                    <TextBox x:Name="txtboxPrijs" FontSize="15" Width="100" HorizontalAlignment="Left"></TextBox>
+                </StackPanel>
+                <StackPanel Margin="10 0 0 0">
+                    <Label FontSize="15">Image Source</Label>
+                    <TextBox x:Name="txtboxImgSource" FontSize="15" Width="200" HorizontalAlignment="Left"></TextBox>
+                </StackPanel>
+                <StackPanel Margin="10 0 0 0">
+                    <Label FontSize="15">Taal</Label>
+                    <TextBox x:Name="txtboxTaal" FontSize="15" Width="200" HorizontalAlignment="Left"></TextBox>
+                </StackPanel>
+                
+                <StackPanel Margin="10 0 0 0">
+                    <Label FontSize="15">Uitgeverij</Label>
+                    <TextBox x:Name="txtboxUitgeverij" FontSize="15" Width="200" HorizontalAlignment="Left"></TextBox>
+                </StackPanel>
+                <StackPanel Margin="10 0 0 0">
+                    <Label FontSize="15">Bladzijden</Label>
+                    <TextBox x:Name="txtboxBladzijden" FontSize="15" Width="100" HorizontalAlignment="Left"></TextBox>
+                </StackPanel>
+                <StackPanel Margin="10 0 0 0">
+                    <Label FontSize="15">Gewicht</Label>
+                    <TextBox x:Name="txtboxGewicht" FontSize="15" Width="100" HorizontalAlignment="Left"></TextBox>
+                </StackPanel>
+                <StackPanel Margin="10 0 0 0">
+                    <Label FontSize="15">Uitvoering</Label>
+                    <ComboBox x:Name="ComboxUitvoering" FontSize="15" Width="150" HorizontalAlignment="Left">
+                        
+                    </ComboBox>
+                    
+                </StackPanel>
+            </WrapPanel>
+            <StackPanel Margin="10 0 0 0">
+                <Label FontSize="15">Omschrijving</Label>
+                <TextBox x:Name="txtboxOmschrijving" FontSize="15" Width="547" Height="100" TextWrapping="Wrap" HorizontalAlignment="Left"></TextBox>
+            </StackPanel>
+            <WrapPanel Margin="0 10 0 0" HorizontalAlignment="Center">
+                <Button x:Name="btnOpslaan" FontSize="20" Width="120" Click="btnOpslaan_Click" Background="AliceBlue">Opslaan</Button>
+                <Button x:Name="btnEditen" FontSize="20" Margin="10 0 0 0" Width="120" Click="btnEditen_Click" Background="AliceBlue">Edit</Button>
+                <Button x:Name="btnVerwijderen" FontSize="20" Margin="10 0 0 0" Width="120" Click="btnVerwijderen_Click" Background="AliceBlue">Verwijderen</Button>
+                <Button x:Name="btnResetten" FontSize="20" Margin="10 0 0 0" Width="120" Click="btnResetten_Click" Background="AliceBlue">Resetten</Button>
+            </WrapPanel>
+            <Label HorizontalAlignment="Center" FontSize="20" Margin="0 20" Content="Boeken Lijst"/>
+            <WrapPanel HorizontalAlignment="Center">
+                <TextBox x:Name="txtboxZoekBoek" Width="200" VerticalAlignment="Center" FontSize="25" Margin="0 0 10 0 "></TextBox>
+                <ComboBox Name="ComBoxFilterCategories" FontSize="20" Background="AliceBlue" Width="120">
+                 
+                </ComboBox>
+                <Button x:Name="btnZoekBoek" FontSize="20" Margin="10 0 0 0" Background="AliceBlue" Padding="5" Click="btnZoekBoek_Click">Boek zoeken</Button>
+                <Button Name="btnRefresh" FontSize="18" Margin="10 0 0 0" Padding="5" Click="btnRefresh_Click">Refresh</Button>
+            </WrapPanel>
+            <StackPanel>
+                <DataGrid x:Name="DTGRidBoeken"  Height="211" SelectionChanged="DTGRidBoeken_SelectionChanged" MaxColumnWidth="50"  MinColumnWidth="50"></DataGrid>
+            </StackPanel>
+        
+        </StackPanel>
+
+    </Grid>
+</Window>

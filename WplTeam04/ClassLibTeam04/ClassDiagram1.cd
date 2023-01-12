@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ClassLibTeam04.Business.Boeken" Collapsed="true">
+    <Position X="21.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgACAAAIAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Business\Boeken.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibTeam04.Business.Boeken1" Collapsed="true">
+    <Position X="23" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAgACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Business\Boeken1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibTeam04.Business.Klanten" Collapsed="true">
+    <Position X="17.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAQAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Business\Klanten.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibTeam04.Business.Students" Collapsed="true">
+    <Position X="17.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Business\Students.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibTeam04.Data.BoekenData" Collapsed="true">
+    <Position X="11.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAEAAAAABBAAAgAAAAAAA=</HashCode>
+      <FileName>Data\BoekenData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ClassLibTeam04.Data.BoekenData1" Collapsed="true">
+    <Position X="13.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAABBAAAgAAAAAAA=</HashCode>
+      <FileName>Data\BoekenData1.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ClassLibTeam04.Data.KlantenLoginData" Collapsed="true">
+    <Position X="6.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAABBAAAgAAAAAAA=</HashCode>
+      <FileName>Data\KlantenLoginData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ClassLibTeam04.Data.StudentsData" Collapsed="true">
+    <Position X="9" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAQABBAAAAAAAAAAA=</HashCode>
+      <FileName>Data\StudentsData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ClassLibTeam04.Data.Framework.BaseResult" Collapsed="true">
+    <Position X="10.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAUAAAAEAAAAAAAAAAAAAACAAAAAAAIA=</HashCode>
+      <FileName>Data\Framework\BaseResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibTeam04.Data.Framework.InsertResult" Collapsed="true">
+    <Position X="9.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Framework\InsertResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibTeam04.Data.Framework.SelectResult" Collapsed="true">
+    <Position X="11.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Framework\SelectResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibTeam04.Data.Framework.SqlCommands" Collapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAQAAAAAAAAAAAAQAAAAAAAAEAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Data\Framework\SqlCommands.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibTeam04.Entities.Bankkaart" Collapsed="true">
+    <Position X="16" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KAAAAAAAAAAAAAAAAGgABAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Entities\Bankkaart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibTeam04.Entities.Bestelling" Collapsed="true">
+    <Position X="17.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAIEkAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Bestelling.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibTeam04.Entities.Boek" Collapsed="true">
+    <Position X="19.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEABCAQAAAAAAAgAAAAAAIAAAAAAAAAAAAGIAAQAIg=</HashCode>
+      <FileName>Entities\Boek.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibTeam04.Entities.Items" Collapsed="true">
+    <Position X="21.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAgAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Items.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibTeam04.Entities.Klant" Collapsed="true">
+    <Position X="23" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAIAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Entities\Klant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibTeam04.Entities.Klanten" Collapsed="true">
+    <Position X="16" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAgAAAYAIAAABgAgAAAAAAAAAAAAQgAAAAAAAA=</HashCode>
+      <FileName>Entities\Klanten.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibTeam04.Entities.Student" Collapsed="true">
+    <Position X="16" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAg=</HashCode>
+      <FileName>Entities\Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibTeam04.Entities.Woonplaats" Collapsed="true">
+    <Position X="21.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Woonplaats.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibTeam04.IndividueleTaken.HassanAli.HassanAli.HassanAli" Collapsed="true">
+    <Position X="9.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QCIAAAggIADAACAAAAAIBAAAAAAAAAAIAAAAAAAKAAA=</HashCode>
+      <FileName>IndividueleOpdracht\HassanAli\HassanAli.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibTeam04.IndividueleTaken.HassanAli.Hobby" Collapsed="true">
+    <Position X="17.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAABAgAAgQAAAAAAQAAAAEAAAg=</HashCode>
+      <FileName>IndividueleOpdracht\HassanAli\Hobby.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibTeam04.IndividueleTaken.HassanAli.HobbyTest" Collapsed="true">
+    <Position X="19.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAACARAAASAAoAAAAAAAAIAAUAAAAAJAACAAAA=</HashCode>
+      <FileName>IndividueleOpdracht\HassanAli\HobbyTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibTeam04.IndividueleTaken.HassanAli.Profiel" Collapsed="true">
+    <Position X="9.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAIAAAAAAADAAAAAAAAIAAAAAAAAAAAIAAAAAAACAAA=</HashCode>
+      <FileName>IndividueleOpdracht\HassanAli\Profiel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibTeam04.IndividueleTaken.HassanAli.WebDeveloper" Collapsed="true">
+    <Position X="19.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAIEIAAAAAAAIIAAAAAAA=</HashCode>
+      <FileName>IndividueleOpdracht\HassanAli\Webdeveloper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibTeam04Framework.IndividueleOpdracht.VahidBaradarkhodamKhosrowshahi.CsharpDeveloper" Collapsed="true">
+    <Position X="6.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAUAAAAAAAAAQAAAAAIAAAAAAA=</HashCode>
+      <FileName>IndividueleOpdracht\VahidB.Khosrowshahi\CsharpDeveloper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibTeam04Framework.IndividueleOpdracht.VahidBaradarkhodamKhosrowshahi.Hobby" Collapsed="true">
+    <Position X="16" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAIAAAAAAAAAAAAAAABAAAAAQAAAAAAQAAAAEAAAg=</HashCode>
+      <FileName>IndividueleOpdracht\VahidB.Khosrowshahi\Hobby.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibTeam04Framework.IndividueleOpdracht.VahidBaradarkhodamKhosrowshahi.Profiel" Collapsed="true">
+    <Position X="6.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAIAAAAAIADAAAAAAAAIAAAAAAAAAAAIAAAAAAACAAA=</HashCode>
+      <FileName>IndividueleOpdracht\VahidB.Khosrowshahi\Profiel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibTeam04Framework.IndividueleOpdracht.VahidBaradarkhodamKhosrowshahi.VahidBaradarkhodamKhosrowshahi" Collapsed="true">
+    <Position X="6.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QCIAAAgAIADAAAAAAACIAAAAAAAAAAAIAAAAAAACAAA=</HashCode>
+      <FileName>IndividueleOpdracht\VahidB.Khosrowshahi\VahidBaradarkhodamKhosrowshahi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibTeam04.Mail.MailServer" Collapsed="true">
+    <Position X="19.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAAAAAAAAAAAAAAAAAAAAAIAAEAAAAgEAAAA=</HashCode>
+      <FileName>Mail\MailServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibTeam04.Mail.PxlMail" Collapsed="true">
+    <Position X="21.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAEAAAAAAAAAAIABAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mail\PxlMail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClassLibTeam04.Settings.Settings" Collapsed="true">
+    <Position X="23" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Settings\Settings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ClassLibTeam04.Data.Framework.ISqlCommands&lt;T&gt;" Collapsed="true">
+    <Position X="16" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Framework\ISqlCommands.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

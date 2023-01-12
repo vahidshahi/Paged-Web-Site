@@ -1,0 +1,100 @@
+﻿<Window x:Class="WpfTeam04.Project.boekTerug"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTeam04.Project"
+        mc:Ignorable="d"
+        Title="Datum update van boek de terug binnen is" Height="600" Width="1200">
+ 
+        <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Margin" Value="10 0"/>
+            <Setter Property="Padding" Value="10 0"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Margin" Value="10 0"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Padding" Value="10 0"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="15 0 0 0 "/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="15 0 0 0 "/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+    </Window.Resources>
+
+
+    <DockPanel>
+
+
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="menu">
+                <MenuItem Header="Afsluiten" Click="mnuAfsluiten_Click" Name="mnuAfsluiten" />
+            </MenuItem>
+        </Menu>
+
+
+        <DockPanel DockPanel.Dock="Bottom" Background="Black" >
+            <Label Name="lblDateTime"/>
+            <Label Content="WPL 2 - Team04" DockPanel.Dock="Right"/>
+            <Label Content="Paged - Boek Terug Binnen" HorizontalAlignment="Center" />
+        </DockPanel>
+
+
+
+        <Grid Background="LightGray">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="550"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="55"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="55"/>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="55"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="1" Grid.Column="1" > Je Kan de Klant zijn bestel geschiedis opvragen</TextBlock>
+            <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" Margin=" 0 0 0 20 "  >
+                <TextBox x:Name="txtKlantId" Width="200"></TextBox>
+                <Button x:Name="btnKlantBestelGeschiedenis" Width="300" Click="btnKlantBestelGeschiedenis_Click">Klant bestelgeschiedenis opvragen</Button>
+            </StackPanel>
+
+            <TextBlock Grid.Row="3" Grid.Column="1" >Je Kan de bestelling opvragen via de bestelNr</TextBlock>
+            <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal" Margin=" 0 0 0 20 "  >
+                <TextBox x:Name="txtBestelNr" Width="200"></TextBox>
+                <Button x:Name="btnBestellingOph" Width="300" Click="btnBestellingOph_Click">Bestellings overzicht opvragen</Button>
+            </StackPanel>
+
+            <TextBlock Grid.Row="5" Grid.Column="1" >geef de BestelingsNr en de EAN in om een Datum te wijzigen  </TextBlock>
+            <StackPanel Grid.Row="6" Grid.Column="1" Orientation="Horizontal" Margin=" 0 0 0 20 "  >
+                <TextBox x:Name="txtEAN" Width="200"></TextBox>
+                <Button x:Name="btnBestelling" Width="300" Click="btnUpdateDate">Boek Retuurdatum ingeven</Button>
+            </StackPanel>
+
+
+
+            <DataGrid Grid.Row="0" Grid.Column="2" Grid.RowSpan="10" x:Name="dtgBoekTerug" Padding="10" Margin="25"></DataGrid>
+
+        </Grid>
+
+
+    </DockPanel>
+</Window>

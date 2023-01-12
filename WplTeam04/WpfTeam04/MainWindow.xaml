@@ -1,0 +1,39 @@
+﻿<Window x:Class="WpfTeam04.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTeam04"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="Bestand"></MenuItem>
+                <MenuItem Header="Individuele opdrachten">
+                    <MenuItem Header="Vahid B.Khosrowshahi" Name="MnuVahidBKhosrowshahi" Click="MnuVahidB_Khosrowshahi_Click"></MenuItem>
+                    <MenuItem Header="Hassan Ali" Name="MnuHassan" Click="MnuHassan_Click"></MenuItem>
+                    <MenuItem Header="Elke Sleven" Name="MnuElke" Click="MnuElke_Click"></MenuItem>
+                    <MenuItem Header="Zander Capuuzzimati" Name="MnuZander" Click="MnuZander_Click"></MenuItem>
+
+                </MenuItem>
+
+                <MenuItem Header="Data">
+                    <MenuItem Header="Boeken Data" Name="BoekenData" Click="BoekenData_Click"></MenuItem>
+                    <MenuItem Header="Klanten Data" Name="KlantenData" Click="KlantenData_Click"></MenuItem>
+
+                </MenuItem>
+                
+                <MenuItem Header="Settings">
+                    <MenuItem Header="SQL Server - settings"></MenuItem>
+                    <MenuItem Header="Setting" >
+                        <MenuItem Header="SQL Server - settings" Click="MnuSettings_Click"></MenuItem>
+
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+            <StatusBar DockPanel.Dock="Bottom"></StatusBar>
+            <Label Content="Wekplekleren 2 startscherm"></Label>
+        </DockPanel>
+    </Grid>
+</Window>
