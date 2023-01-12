@@ -1,8 +1,8 @@
 # ##### Project: Paged-Web-Site
 
-# ### This Website is made for renting Books
+##### This Website is made for renting Books
 
-# ##### Technology stack :
+###### Technology stack :
 
 # C# , Html , JavaScript , Css , SQL
 
