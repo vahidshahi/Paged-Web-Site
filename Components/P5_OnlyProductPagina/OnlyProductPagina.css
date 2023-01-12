@@ -1,0 +1,374 @@
+:root {
+
+
+    --border: .1rem solid rgba(0,0,0,.1);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-image: url("../../assets/background.jpg");
+
+}
+main{
+    display: flex;
+    justify-content: center;
+
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* kleuren style voor deze pagina */
+.header, footer , .small-display-dropdown{
+    background-color: var(--no-white-background);
+}
+footer .share a{
+    background-color: var(--no-white-background-1);
+}
+
+.product-pagina{
+   background: var(--no-white-background);
+    padding: 1.5rem 2rem;
+}
+
+
+
+.product-pagina .content{
+  width: 100%;
+  padding: 20px 10px ;
+}
+.product-pagina .content h3{
+     margin: 0.75rem 0;
+     letter-spacing: 1px;
+     color: var(--text-darkblue);
+ }
+.product-pagina .content h4{
+    margin: 0 0 0.35rem 0;
+    padding: 1.25rem  0 0 0;
+    font-size: 1.15rem;
+    text-decoration: underline;
+    color: indianred;
+}
+.product-pagina .content--bottom{
+    display: grid;
+    grid-template-areas:  "omschrijving" "info" ;
+}
+
+
+
+
+.container-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-img .box-img{
+    margin: 1rem 0  0 0;
+    padding: 35px;
+    justify-content: center;
+    --color1:  #E9E9E9;
+    --color2 : #E1E1E1;
+    background: linear-gradient(-45deg, var(--book-2) 0%, var(--book-2) 50%, var(--c-book-2-b) 50%, var(--c-book-2-b) 100%);
+}
+.container-img .box-img img{
+    min-width: 50px;
+    height: auto;
+    max-width: 400px;
+    width: 100%;
+
+}
+
+
+/* title , auteur , button */
+.auteur, .book-titel{
+    text-align: left;
+    color: black;
+}
+.auteur{
+    font-size: 1.45rem;
+    padding-left: 6px;
+
+
+}
+.book-titel{
+    font-size: 2rem;
+    margin: 1rem 0 0 0;
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 2.5rem;
+}
+.first-info-group{
+    padding: 0 0 0.75rem 2rem ;
+    border-bottom: var(--border);
+}
+.button-group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    padding: 0 0 0.75rem 0 ;
+
+}
+.voordelen{
+    padding: 2rem 0 0 0;
+    align-self: flex-start;
+}
+.container-info-and-button .prijs{
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    padding:0 2rem  0 0 ;
+    align-self: flex-end;
+}
+.button-group button , .button-group a{
+    font-family: Consolas, serif ;
+    margin: 0 5px;
+    border: 5px solid black;
+    box-sizing: unset;
+    border-radius: .5rem;
+    flex-basis: 50%;
+    flex-grow: 1;
+    font-size: 1rem;
+    font-weight: bolder;
+    letter-spacing: 0;
+    background: var(--lightblue);
+    padding: 1em .5em;
+}
+.button-group a{
+    text-align: center;
+    padding: 1rem 0;
+    color: black;
+}
+.button-group button:hover{
+    background: var(--btn-green)
+}
+.btn-winkelwagen.gray{
+    background-color: gray;
+    cursor: auto;
+    pointer-events: none;
+}
+.btn-winkelwagen.gray:hover{
+    background-color: gray;
+}
+/*
+.container-info-and-button .btn-kalender{
+     background: var(--btn-blue)
+}
+.container-info-and-button .btn-kalender:hover{
+    background: var(--btn-green)
+}.container-info-and-button .btn-winkelwagen{
+     background-color: var(--btn-green);
+ }
+.container-info-and-button .btn-winkelwagen:hover{
+    background: var(--btn-blue)
+}
+.container-info-and-button .button-group .voordelen p{
+color: var(--text-green);
+font-size: 1.35rem;
+align-self: flex-start;
+    letter-spacing: 0.025rem;
+    font-weight: bold;
+    text-outline: 5px  black;
+}
+*/
+
+/*Omschrijving*/
+.container-omschrijving{
+    max-width: 420px;
+    width: 100%;
+}
+.container-omschrijving p{
+    padding: 1.25rem 0;
+    font-size: 1.35rem;
+    word-wrap: break-word;
+}
+/*  <!-- tabel met alle info ,   -->*/
+.container-specificaties table{
+    display: grid;
+    grid-template-columns: 12rem auto;
+}
+.container-specificaties table thead tr , .container-specificaties table tbody tr{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.container-specificaties table thead tr th , .container-specificaties table tbody tr td{
+    margin: 0.25rem 0 ;
+    font-weight: normal;
+    font-size: 1.1rem;
+}
+
+/* dropdown */
+#dropdown-content-info-tabel ,
+#omschrijving-dropdown-content{
+    border: 2px solid var(--no-white-background);
+    background-color: var(--c-no-white-background-1) ;
+    border-radius: .5em;
+    height: 0;
+    overflow: hidden;
+    transition: 2s height ease-in-out;
+    width: 100%;
+    padding:  0 .5rem;
+
+}
+#omschrijving-dropdown-content{
+    height: 0;
+    -moz-transition: height 5s ease;
+    -webkit-transition: height 5s ease;
+    -o-transition: height 5s ease;
+    transition: height 5s ease;
+
+}
+#omschrijving-dropdown i{
+    font-size: 1.5rem;
+    justify-self: center;
+    align-self: center;
+    margin: 0 30% 0 0 ;
+
+}
+/*als click event */
+#dropdown-content-info-tabel.drop{
+    height: 28rem;
+}
+#omschrijving-dropdown-content.drop{
+    height: auto;
+}
+#dropdown-info-tabel.active i , #omschrijving-dropdown.active i {
+    transform: rotate(180deg);
+}
+#dropdown-info-tabel.hover i , #omschrijving-dropdown.hover i {
+    transform: rotate(180deg);
+}
+
+/*als hover event
+#dropdown-info-tabel:hover #dropdown-content-info-tabel{
+    height: 28rem;
+}
+#omschrijving-dropdown:hover #omschrijving-dropdown-content{
+    height: auto;
+}
+#dropdown-info-tabel:hover i ,#omschrijving-dropdown:hover  i {
+    transform: rotate(180deg);
+}*/
+
+#dropdown-info-tabel i, #omschrijving-dropdown i{
+    font-size: 1.5rem;
+    justify-self: center;
+    align-self: center;
+    margin: 0 30% 0 0 ;
+    transition: rotate 2s ease;
+}
+.container-specificaties{
+    grid-area: info;
+    border-top: var(--border);
+}
+.container-omschrijving{
+    grid-area: omschrijving;
+    border-top: var(--border);
+    transform: translateY(-2rem);
+}
+
+@media (min-width: 855px) {
+
+    .product-pagina{
+        padding: 1.5rem 2rem;
+    }
+    .product-pagina .content--bottom{
+        display: flex;
+    }
+    .product-pagina .content--bottom,
+    .product-pagina .content--bottom>*{
+        flex: 1;
+    }
+    .content--top{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .container{
+        padding: 0;
+        margin: 0;
+    }
+
+    .container-info-and-button, .container-omschrijving{
+        padding: 0 0 0 .75rem;
+    }
+    .container-omschrijving{
+        max-width: 520px;
+    }
+    .container-omschrijving{
+        grid-area: omschrijving;
+        border-top: var(--border);
+        transform: none;
+    }
+
+
+
+
+
+
+
+
+    .container-img .box-img img{
+        max-width: 400px;
+    }
+
+    .container-specificaties table{
+        grid-template-columns: 13.5rem auto;
+
+    }
+    .container-specificaties table thead tr th , .container-specificaties table tbody tr td{
+        margin: 0.25rem 0 ;
+        font-weight: normal;
+        font-size: 1.25rem;
+        letter-spacing: 1px;
+    }
+
+    .button-group{
+        border-bottom: var(--border);
+    }
+
+
+}
+@media (max-width: 500px) {
+   .product-pagina{
+       padding: 0;
+   }
+    .container-img {
+        display: flex;
+    }
+    .container-img .box-img{
+        align-self: center;
+        min-width: 50px;
+        height: auto;
+        max-width: 200px;
+        width: 100%;
+    }
+    .container-img .box-img img{
+
+    }
+
+    .button-group button , .button-group a{
+        font-family: Consolas, serif ;
+        margin: 0 5px;
+        border: 5px solid black;
+        box-sizing: unset;
+        border-radius: .5rem;
+        flex-basis: 50%;
+        flex-grow: 1;
+        font-size: 1.35rem;
+        font-weight: bolder;
+        letter-spacing: 0;
+        background: var(--lightblue);
+        padding: 1rem .5rem;
+    }
+}

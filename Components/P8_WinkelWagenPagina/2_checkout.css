@@ -1,0 +1,389 @@
+
+
+*{
+
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+
+
+
+}
+
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5%;
+    padding: 0;
+    justify-content: space-around;
+
+}
+#left-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4px;
+    width: 60%;
+    margin-left: 12.5%;
+
+
+}
+.right-container{
+    margin-top: 7%;
+    float: right;
+    width: 40%;
+    padding-right: 5%;
+margin-left: 12.5%;
+
+
+
+}
+#afrekenn{
+    margin-top: 25px;
+    text-align: center;
+
+}
+
+.Bezorgopties{
+width: 100%;
+margin-top: 25%;
+
+
+
+}
+.Bezorgopties h1{
+    margin-bottom: 5%;
+    width: 80%;
+    margin-left: 10%;
+    background-color: rgb(208, 65, 12);
+    color: #f1f1f1;
+    display: block;
+    text-align: center;
+    border-radius: 8px;
+}
+.verzend{
+    display: flex;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 5px;
+    border-style: solid ;
+    border-radius: 8px;
+    width: fit-content;
+    justify-content: space-around;
+    background-color: rgb(208, 65, 12);
+    color: #f1f1f1;
+}
+.verzend h2{
+    margin-right: 5px;
+}
+
+.ophalen{
+    display: flex;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 5px;
+    border-style: solid ;
+    border-radius: 8px;
+    width: fit-content;
+    justify-content: space-around;
+    background-color: rgb(208, 65, 12);
+    color: #f1f1f1;
+}
+.opties{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    width: 100%;
+    margin: 0 auto;
+
+}
+.klantInfo{
+
+    width: 66%;
+    height: 150px;
+    border-style: solid ;
+    border-radius: 8px;
+    margin:5px auto;
+
+}
+
+.bookImage{
+    width: 25%;
+    height: auto;
+
+
+}
+.name{
+    width: 25%;
+font-weight: bolder;
+    margin-top: 15%;
+    margin-left: 4%;
+
+    text-align: center;
+}
+.price{
+    width: 15%;
+    align-items: center;
+    margin-left: 100px;
+font-weight: bolder;
+    margin-top: 15%;
+}
+.product{
+    width:90%;
+    margin-right: 25%;
+    display: flex;
+    background-color: bisque;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    border-style:solid;
+    border-color: #f1f1f1;
+
+    color: #232f42;
+    font-size: 20px;
+    font-weight: bolder;
+
+
+
+}
+.productInCart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 3%;
+}
+#productInCarth1{
+    background-color: rgb(208, 65, 12);
+    color: #f1f1f1;
+width: 90%;
+    border-radius: 8px;
+    padding: 10px;
+
+}
+
+.product-total{
+    width:90%;
+position: relative;
+    right: 15%;
+
+
+    display: flex;
+    justify-content: space-around;
+    border-top: 2px solid black;
+
+    color: #ffffff;
+    background-color: #8c8c8c;
+
+    font-size: 18px;
+
+}
+.pay{
+    margin:0 auto;
+    background-color: #15428f;
+    border-radius: 25px;
+    height: 25px;
+    width:100px;
+}
+#checkout{
+    padding: 25px 20px;
+
+    font-size: 15px;
+    height: 70px;
+    background-color: rgb(208, 65, 12);
+    color: #f1f1f1;
+    text-align: center;
+    border-radius: 35px;
+    width: fit-content;
+
+    display: block;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.beslist{
+    display: flex;
+    flex-direction:row;
+    justify-content: normal;
+   margin-top:2%;
+float: right;
+    position: relative;
+    right: 27%;
+
+
+}
+#cancel{
+    padding: 25px 20px;
+
+    font-size: 15px;
+    height: 70px;
+    background-color: rgb(208, 65, 12);
+    color: #f1f1f1;
+    text-align: center;
+    border-radius: 35px;
+    width: fit-content;
+
+    display: block;
+    margin-top: 10px;
+    margin-left: 10px;
+
+}
+ a{
+    color: #ffffff;
+
+}
+#checkout a{
+    color: #f1f1f1;
+}
+#bewerk{
+
+
+    font-size: 12px;
+    background-color: rgb(208, 65, 12);
+    color: #f1f1f1;
+    text-align: center;
+    border-radius: 8px;
+    width: fit-content;
+    display: block;
+    margin-top: 10px;
+    margin-left: 10px;
+
+
+
+
+}
+.top-bar #login{
+    color: black;
+}
+#logout{
+    color: black;
+}
+#account{
+    z-index: 2000;
+}
+.klantInfo{
+    display: flex;
+   padding: 50px;
+
+    border-style: solid ;
+    border-radius: 8px;
+    width:80%;
+    margin-right: 10%;
+    justify-content: space-around;
+
+margin-bottom: 20%;
+    flex-direction: column;
+    background-color: rgb(208, 65, 12);
+    color: #f1f1f1;
+}
+.product{
+    float: right;
+}
+.WinkelWagen{
+
+    display: flex;
+    flex-direction: column;
+}
+#adres{
+    float: right;
+    margin-right: 15%;
+}
+
+@media screen and (max-width: 600px) {
+
+    body {
+ text-align: center;
+    }
+
+   .container {
+
+        flex-direction: column;
+       padding: 0;
+    }
+
+
+.right-container{
+    width: 100%;
+    margin: 0;
+}
+#left-container{
+    width: 100%;
+    margin: 0;
+   padding: 0;
+}
+    #bewerk{
+     width: fit-content;
+        font-size: 8px;
+    }
+    .ophalen{
+        font-size: 12px;
+        display: flex;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        border-style: solid ;
+        border-radius: 8px;
+        width: fit-content;
+        justify-content: space-around;
+        background-color: rgb(208, 65, 12);
+        color: #f1f1f1;
+    }
+    .verzend{
+        font-size: 12px;
+        display: flex;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        border-style: solid ;
+        border-radius: 8px;
+        width: fit-content;
+        justify-content: space-around;
+        background-color: rgb(208, 65, 12);
+        color: #f1f1f1;
+    }
+    .opties{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        width: 100%;
+
+
+    }
+    .Bezorgopties h1{
+        font-size: 25px;
+        margin-bottom: 5%;
+        width: 60%;
+        margin-left: 20%;
+        background-color: rgb(208, 65, 12);
+        color: #f1f1f1;
+        display: block;
+        text-align: center;
+        border-radius: 8px;
+    }
+    .Bezorgopties{
+
+    }
+
+    .productInCart {
+        justify-content:space-evenly;
+
+    }
+.productInCart h1{
+font-size: 18px;
+}
+#adres{
+    margin: 10%;
+}
+.product{
+    margin: 0 6%;
+}
+.product-total{
+    margin: 0 19%;
+}
+    #cancel a{
+        font-size: 12px;
+    }
+    #checkout a{
+        font-size: 12px;
+    }
+}

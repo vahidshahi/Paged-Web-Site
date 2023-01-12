@@ -1,0 +1,155 @@
+
+
+:root{
+    --lightgray: #eee;
+    --box-shadow:0 0.1em 0.5rem #8c8c8c;
+    --box-shadow2 : 0 -2px 2px #c2c2c2;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+footer{
+     padding: 1.5rem  1.5rem 0 1.5rem ;
+     margin-top: 1em;
+     box-shadow: var(--box-shadow2) ;
+     text-align: center;
+}
+footer .footer-box-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+footer .box{
+    min-width: 200px;
+    padding: 0 0.5rem;
+    text-align: start;
+}
+h3{
+                                     font-size: 1.5rem;
+}
+.logo-img{
+    width: 7rem;
+    height: auto;
+}
+.links{
+    display: block;
+                                     font-size: 1.25rem;
+    padding:0.5rem 0;
+    text-decoration: none;
+    color: var(--darkblue);
+}
+.links i{
+    color:var(--darkblue);
+    padding-right: .3rem;
+                                  font-size: 1.15rem;
+}
+.links:hover{
+   color: var(--lightblue);
+}
+.links:hover i{
+    color: var(--lightblue);
+    padding-left: 0.3rem;
+}
+.footerlogo p{
+ font-size: 1.25rem;
+}
+.openingsuren .grid-openingsuren .box-days p{
+      font-size: 1.25rem;
+}
+.share a{
+    height: 2em;
+    width: 2em;
+    line-height:2em;
+    border-radius: 25%;
+                             font-size: 1.35rem;
+    background: var(--lightgray);
+    text-align: center;
+    text-decoration: none;
+    color: var(--darkblue);
+    box-shadow: var(--box-shadow);
+}
+
+.share a:hover{
+    background: var(--lightblue);
+    color: #fff;
+}
+.grid-openingsuren{
+     font-size: 1rem;
+}
+
+
+.box-days span{
+     color: var(--darkblue);
+                                     font-size: 1.35rem;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+.box-days p{
+    padding: 0.5rem 0 0 0;
+}
+.box-days .openings-day {
+    font-size: 1.15rem;
+    color: black;
+    padding: 0 0 0  1.35rem;
+}
+
+
+
+.credit{
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem 0 0 0 ;
+    z-index: 501;
+    border-top: 3px solid var(--lightgray);
+}
+.credit span{
+    color:var(--darkblue);
+    padding-left: 0.3rem ;
+}
+.credit span , .credit{
+    font-weight: bold;
+    font-size: 1.25rem ;
+}
+
+
+@media screen and (max-width: 950px){
+    .navigeer{
+        grid-area: navi;
+    }
+    .navigeer a{
+       padding:  0.35rem 0;
+    }
+    .footerlogo{
+        grid-area: footlogo;
+    }
+    .contactlinks{
+        grid-area: clink;
+    }
+    .openingsuren{
+        grid-area: openuur;
+    }
+     footer .footer-box-container{
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows: 1fr 1fr;
+         grid-template-areas: "footlogo navi"
+         "clink openuur";
+     }
+}
+@media screen and (max-width: 545px) {
+    .navigeer{
+
+        margin-top: .5rem;
+    }
+    footer .footer-box-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "clink"  "openuur"
+        "navi"  "footlogo";
+        text-align: center;
+    }
+}

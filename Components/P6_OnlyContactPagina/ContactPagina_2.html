@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>contact pagina</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../assets/favicon%20(1).ico">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- C1_OnlyHeader -->
+    <link rel="stylesheet" href="../C1_OnlyHeader/OnlyHeader_1.css">
+    <script defer src="../C1_OnlyHeader/OnlyHeader_1.js"></script>
+    <!-- C2_OnlyFooter -->
+    <link rel="stylesheet" href="../C2_OnlyFooter/OnlyFooter_1.css">
+
+    <!-- OnlyContactPagina -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="ContactPagina_2.css">
+
+    <script defer src="ContactJs.js"></script>
+    <script defer src="../C1_OnlyHeader/CheckKlant.js"></script>
+    <script defer src="../C1_OnlyHeader/Zoekbalk.js"></script>
+
+</head>
+<body>
+<header>
+    <div class="top-bar">
+        <p id="naamVanKlant"> </p>
+        <i class="fas fa-user" id="user-icon"></i>
+        <a id="login" href="../P2_OnlyNewUser_Inlog/login.html">Login</a>
+
+
+        <!-- ../../Components/P2_OnlyNewUser_Inlog/login.html -->
+    </div>
+    <div class="account" id="account">
+        <h4>Account</h4>
+        <a href="../P3_AccountPagina/AccountPagina.html">Profiel</a>
+        <a>Orders</a>
+        <a>Account Settings</a>
+        <a id="logout" href="../P1_OnlyStartPagina/OnlyStartPagina_1.html">Logout</a>
+
+    </div>
+    <div class="header">
+        <div class="flex">
+            <!--logo-->
+            <div>
+                <a href="../../Components/P1_OnlyStartPagina/OnlyStartPagina_1.html" class="header-logo">
+                    <div>
+                        <p class="header-logo-slogan">Huur, Lees & Donneer</p>
+                        <p class="header-logo-name" >PAGED</p>
+                    </div>
+                    <img alt="" class="header-logo-img" src="../../assets/logo.png">
+                </a>
+            </div>
+            <div class="flex-column">
+                <div>
+                    <div class="nav icons none-display">
+                        <ul>
+
+                            <li><i class="fas fa-heart"></i></li>
+                            <li><i class="fas fa-user"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav navbar">
+                    <ul>
+                        <li class="big-display"><a href="../../Components/P1_OnlyStartPagina/OnlyStartPagina_1.html">Start</a></li>
+                        <li class="big-display"><a href="../../Components/P4_OnlyWinkelPagina/pageByJS_Winkelpagina.html">Winkel</a></li>
+                        <!--               <li class="big-display" id="accountItem"><a href="../../Components/P2_OnlyNewUser_Inlog/login.html">Account</a></li>-->
+                        <li class="big-display"><a href="../P6_OnlyContactPagina/ContactPagina_2.html">Contact</a></li>
+                        <li class="small-display"><i class="fas fa-bars" id="small-display-btn"></i></li>
+
+                        <li ><a class="fas fa-shopping-cart" href="../P8_WinkelWagenPagina/1_shoppingCart.html"><span>0</span></a></li>
+                        <li><form action="" class="search-form">
+                            <label for="zoekbalk"><i class="fas fa-search" id="zoek-icon"></i></label>
+                            <input  id="zoekbalk" placeholder="hoe kunnen we je helpen?">
+                        </form></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="small-display-dropdown" id="small-display-content">
+        <a href="../../Components/P1_OnlyStartPagina/OnlyStartPagina_1.html">Start</a>
+        <a href="../../Components/P4_OnlyWinkelPagina/pageByJS_Winkelpagina.html">Winkel</a>
+        <a id="small-display-dropdown-accountBtn">Account</a>
+        <a href="../P6_OnlyContactPagina/ContactPagina_2.html">Contact</a>
+    </div>
+</header>
+
+<main>
+    <div class="contactpagina">
+        <div class="mailons">
+            <span>Stuur ons een mail </span>
+            <div class="form-container">
+                <form >
+                    <div class="form-box">
+                        <div>
+                            <!--voornaam  -->
+                            <div>
+                                <label for="klantFirstNameFromContactPage">Voornaam</label>
+                                <input type="text" id="klantFirstNameFromContactPage" required >
+                            </div>
+                            <!--Achternaam  -->
+                            <div>
+                                <label for="klantSurNameFromContactPage" >Achternaam</label>
+                                <input type="text"  id="klantSurNameFromContactPage" required>
+                            </div>
+                        </div>
+                        <div>
+                            <!--email  -->
+                            <div>
+                                <label for="klantEmailFromContactPage" >E-mail</label>
+                                <input  class="form-input" id="klantEmailFromContactPage" required>
+                            </div>
+                            <!--Nummer   -->
+                            <div>
+                                <label for="klantPhoneFromContactPage" >Telefoon/GSM Nummer</label>
+                                <input type="text"  id="klantPhoneFromContactPage" >
+                            </div>
+                        </div>
+                        <div>
+                            <!--klantNmr  -->
+                            <div>
+                                <label for="klantKlantNmrFromContactPage">Klantennummer</label>
+                                <input type="text"  id="klantKlantNmrFromContactPage" >
+                            </div>
+                            <!--BestelNmr  -->
+                            <div>
+                                <label for="klantOrderNmrFromContactPage" >Bestelnummer</label>
+                                <input type="text"  id="klantOrderNmrFromContactPage" >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-box__textarea">
+                        <!-- Message  -->
+                        <label for="klantMessageFromContactPage" class="form-label">Schrijf hier je bericht</label>
+                        <textarea id="klantMessageFromContactPage" required></textarea>
+                    </div>
+                <button type="submit" id="submit">Versturen</button>
+                </form>
+            </div>
+
+        </div>
+        <div class="belons">
+            <div class="nice-to-meet-you">
+                <span>Nice<br>to<br>meet<br>you</span>
+            </div>
+            <div class="dagen-uren">
+                <span>Bel ons</span>
+                <span>+32 478 20 45 86 </span>
+                <div>
+                    <p>Woensdag tot Vrijdags</p>
+                    <p>10.30 - 17.30</p>
+                </div>
+              <div>
+                  <p>Maandag en Zaterdag</p>
+                  <p>13.30 - 16.00</p>
+              </div>
+                <div>
+                    <p>Dinsdag en Zondag</p>
+                    <p>Gesloten</p>
+                </div>
+            </div>
+        </div>
+        <div class="bezoekons">
+            <span>Kom langs</span>
+            <p>Hasseltweg 4 3600 Genk</p>
+            <div class="iframe-box">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2512.7583468224934!2d5.4749110157500995!3d50.965171979549645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0df3303dda5f7%3A0xed93792cc00f80e7!2sHasseltweg%204%2C%203600%20Genk!5e0!3m2!1sen!2sbe!4v1649453380332!5m2!1sen!2sbe"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+
+<footer>
+    <div class="footer-box-container">
+        <!--ons  logo en slogo , links social media  -->
+        <div class="box  footerlogo">
+            <h3> Paged <img class="logo-img" src="../../assets/logo.png" alt=""> </h3>
+            <p>Lees, Huur & Doneeer</p>
+            <div class="share">
+                <a href="https://www.facebook.com" class="fab fa-facebook-f"></a>
+                <a href="https://www.twitter.com" class="fab fa-twitter"></a>
+                <a href="https://www.instagram.com" class="fab fa-instagram"></a>
+                <a href="https://www.linkedin.com" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+        <!-- ons  telefoon nummer , email , aderes -->
+        <div class="box contactlinks">
+            <h3>Contact info</h3>
+            <a href="../../Components/P6_OnlyContactPagina/ContactPagina_2.html" class="links"> <i class="fas fa-phone"></i>+32 478 20 45 86 </a>
+            <a href="mailto:info@paged.be" class="links"> <i class="fas fa-envelope"></i>info@paged.be  </a>
+            <a href="https://www.google.com/maps/place/Hasseltweg+4,+3600+Genk" class="links"><i class="fas fa-map-marker-alt"></i>Hasseltweg 4
+                <br>3600 Genk</a>
+        </div>
+
+        <!-- openingsuen -->
+        <div class="box openingsuren">
+            <h3>Openingsuren</h3>
+            <div class="grid-openingsuren">
+                <div class="box-days">
+                    <p><span>W</span>oensdag tot
+                        <span>V</span>rijdags</p>
+                    <span class="openings-day">10.30 - 17.30</span>
+
+                    <p><span>M</span>aandag en
+                        <span>Z</span>aterdag</p>
+                    <span class="openings-day">13.30 - 16.00</span>
+
+                    <p><span>D</span>insdag en
+                        <span>Z</span>ondag</p>
+                    <span class="openings-day">Gesloten</span>
+                </div>
+
+            </div>
+        </div>
+        <!-- links-->
+        <div class="box navigeer">
+            <h3>Navigeer</h3>
+            <a href="../../Components/P1_OnlyStartPagina/OnlyStartPagina_1.html" class="links"> <i class="fas fa-arrow-right"></i>Start</a>
+            <a href="../../Components/P4_OnlyWinkelPagina/pageByJS_Winkelpagina.html" class="links"> <i class="fas fa-arrow-right"></i>Winkel</a>
+            <a id="account-btn-footer" class="links"> <i class="fas fa-arrow-right"></i>Account</a>
+            <a href="../../Components/P1_OnlyStartPagina/Doneer.html" class="links"> <i class="fas fa-arrow-right"></i>Doneer</a>
+            <a href="../../Components/P7_OnlyRechtenPagina/OnlyRechtenPagina_1.html" class="links"> <i class="fas fa-arrow-right"></i>Rechten</a>
+        </div>
+
+
+    </div>
+
+    <div class="credit">Gemaakt door<span>Team 4</span></div>
+
+</footer>
+
+</body>
+</html>

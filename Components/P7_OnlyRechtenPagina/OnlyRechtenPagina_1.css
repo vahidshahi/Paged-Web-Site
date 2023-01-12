@@ -1,0 +1,56 @@
+:root {
+
+    --gray: #666666FF;
+    --hover: #c4eaea;
+    --border: .1rem solid rgba(0,0,0,.1);
+    --overlay : rgba(73, 73, 73, 0.73);
+    --modal-btn-background: #ffb700;
+    --modal-btn-color: #ffffff;
+    --modal-btn-hover-background: rgba(255, 183, 0, 0.66);
+    --modal-btn-hover-color: #000000;
+    --modal-btn-border: 1px solid #7e7e7e;
+    --heu-lightblue : 202;
+    --saturation-lightblue: 100%;
+    --lightness-lightblue: 50%;
+    --lightblue: hsl(var(--heu-lightblue), var(--saturation-lightblue), var(--lightness-lightblue));
+
+    --heu-darkblue : 209;
+    --saturation-darkblue: 100%;
+    --lightness-darkblue: 30%;
+    --darkblue  : hsl(var(--heu-darkblue), var(--saturation-darkblue), var(--lightness-darkblue));
+    --hoverLightgray: rgba(238, 238, 238, 0.73);
+    --lightgray: #eee;
+    --box-shadow:0 0.1em 0.5rem #8c8c8c;
+}
+
+
+body {
+    background-image: url("../../assets/background.jpg");
+
+}
+
+/* profiel data (linker kant) */
+
+main{
+    min-height: 750px;
+}
+
+.rechten{
+    background: white;
+    padding:  0 5rem;
+    margin: 0 2rem;
+}
+
+.rechten p{
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 40px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+.rechten h1{
+    color: #000dff;
+}

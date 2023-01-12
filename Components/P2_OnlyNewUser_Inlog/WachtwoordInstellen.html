@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forgot Password</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../assets/favicon%20(1).ico">
+    <link rel="stylesheet" href="WachtwoordVergeten.css">
+</head>
+<body>
+<div class="container">
+    <div class="col-1">
+        <h1>Wachtwoord vergeten</h1>
+        <p>Vul je e-mailadres in</p>
+        <input type="email" placeholder="Vul je e-mailadres in" id="email">
+        <input type="code" placeholder="Code" id="code">
+        <br><br>
+        <button type="button" id="btnDoorgaan">Doorgaan</button>
+        <button type="button" id="btnCodeDoorgeven">Verifier Code</button>
+        <p id="EmailBestaatNiet">Uw ingevoerde e-mailadres bestaat niet</p>
+    </div>
+    <div class="col-2" id="wachtwoordWijzigen">
+        <h1>Nieuw Wachtwoord</h1>
+        <p>Maak een nieuw wachtwoord aan dat je niet op een andere site gebruikt</p>
+        <input type="password" placeholder="Maak een nieuw wachtwoord" id="wachtwoordEén" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required
+               title="Moet ten minste één nummer en één hoofdletter and kleine letter bevatten, en  ten minste 8 of meer karakters"
+               minlength="8">
+
+        <br><br>
+        <input type="password" placeholder="Bevestig uw wachtwoord" id="wachtwoordTwee">
+        <br><br>
+        <button type="button" id="btnWijzigen">Wijzigen</button>
+        <p id="wachtwoordVergelijken">Het wachtwoord komt niet overeen</p>
+    </div>
+    <div id="message">
+        <h3>Password must contain the following:</h3>
+        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+        <p id="number" class="invalid">A <b>number</b></p>
+        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+    </div>
+</div>
+
+<script src="WachtwoordInstelling.js" type="text/javascript"></script>
+</body>
+</html>

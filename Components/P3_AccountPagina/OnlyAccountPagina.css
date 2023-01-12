@@ -1,0 +1,235 @@
+
+:root {
+
+
+
+    --hoverLightgray: rgba(238, 238, 238, 0.73);
+    --lightgray: #eee;
+    --box-shadow:0 0.1em 0.5rem #8c8c8c;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+
+}
+
+body {
+    background-image: url("../../assets/background.jpg");
+
+}
+
+
+.header, footer , .small-display-dropdown{
+    background-color: var(--no-white-background);
+}
+
+main{
+    min-height: 750px;
+    background-color: var(--no-white-background);
+}
+
+/* user data display and btn */
+.profiel_settings .infobox-container{
+    padding-top: 1rem;
+    margin: 0 1rem;
+}
+.profiel_settings .infobox-container .infobox a{
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    margin: 0 .5rem;
+}
+.profiel_settings .infobox-container .infobox a:hover{
+    background-color: var(--hoverLightgray);
+    border-radius: 10px;
+}
+.profiel_settings .infobox-container .infobox{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    border-bottom: var(--border);
+
+}
+.profiel_settings .infobox-container .infobox>*{
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 0.5rem 0;
+    font-size: 1.25rem;
+    font-family: 'Poppins', sans-serif;
+}
+.gridInButton {
+    display: grid;
+    grid-template-columns: 14rem 1fr;
+}
+.align-content {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.flex-input{
+    flex-basis: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items:  center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.align-content div{
+    margin-left: 0.5rem ;
+}
+
+.profiel-pagina section{
+    max-width: 40rem;
+    padding: 2rem 0  ;
+}
+.profiel-pagina section h3{
+    font-family: 'Ubuntu', serif;
+    font-size: 1.75rem;
+    text-decoration: underline var(--red-2);
+    margin-left: .5rem;
+    margin-bottom: 1rem;
+}
+.profiel-pagina>div{
+    background-color: var(--no-white-background-tap);
+}
+.profiel-pagina>div button{
+    font-size: 1.25rem;
+    padding: 0.25em .5em;
+    border: none;
+    background-color: var(--no-white-background-tap);
+    border-radius: .5rem;
+    color: var(--darkblue);
+    float: none;
+}
+.profiel-pagina>div button.active{
+    background-color: var(--no-white-background);
+}
+.profiel-pagina>div button:hover{
+    background-color: var(--no-white-background-tap-2);
+}
+.profiel_settings, .geleende-boeken, .mijn-boeken{
+    display: none;
+    margin: 2rem 1rem;
+}
+.profiel_settings.active, .geleende-boeken.active, .mijn-boeken.active{
+    display: block;
+}
+
+
+
+
+.profiel-pagina .geleende-boeken button{
+    background-color: var(--book-2);
+    color: var(--no-white-background);
+    font-weight: 600;
+    border: 3px solid var(--c-book-5);
+
+    padding: 0.25rem .5rem;
+    font-size: 1rem;
+    margin: .5rem 1.5rem ;
+}
+.profiel-pagina .geleende-boeken button:hover{
+    background-color: var(--book-2-b);
+}
+
+
+.card-row{
+    display: flex;
+    padding: .5rem 0;
+    margin: 0 1rem;
+    border-bottom: var(--border);
+
+}
+.card-row .title-book{
+    font-size: 1.6rem;
+    width: 15rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    align-self: end;
+    overflow: hidden;
+    white-space: nowrap;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    flex: 1;
+    margin-left: .5rem;
+}
+.card-row .kalender-day{
+    --kalender-day-width: 2.75rem;
+    font-size: 1.1rem;
+    width: var(--kalender-day-width) ;
+    margin: 0 .5rem 0 1rem;
+    aspect-ratio: 1/1;
+    text-align: center;
+}
+.card-row .kalender-day .kMaand{
+    /* Mei wordt niet afgekort en krijgt dus nooit een punt.
+    jan., feb., mrt., apr., jun., jul.,
+     aug., sept., okt., nov., dec.*/
+    font-size: 1em;
+    color: white;
+    text-align: center;
+    display: block;
+    background-color: var(--red-1);
+    width: var(--kalender-day-width) ;
+    aspect-ratio: 1/.45;
+    outline: 1px solid var(--red-1);
+}
+.card-row .kalender-day .kDag{
+    font-size: 1.25em;
+    font-weight: bold;
+    color: black;
+    display: block;
+    background-color: white;
+    width: var(--kalender-day-width) ;
+    aspect-ratio: 1/.55;
+    outline: 1px solid var(--red-1);
+
+}
+
+.card-geschiedenis{
+   margin: 0 0 1rem 2rem;
+    background-color: var(--no-white-background-tap-2);
+    border: var(--border);
+    padding: 1rem;
+
+}
+.bestelings-Date{
+    display: flex;
+
+}
+.bestelings-Date>div{
+    flex: 1;
+}
+.product{
+    display: flex;
+
+
+}
+
+
+.product img{
+   height: auto;
+    max-width: 125px;
+}
+.flex-column--left>div{
+    flex-basis: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size:  1.25em;
+}
+.flex-column--left{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 1;
+    margin-left: 1rem;
+    justify-content: space-evenly;
+
+}

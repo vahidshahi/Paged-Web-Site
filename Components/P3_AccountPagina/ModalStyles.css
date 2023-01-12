@@ -1,0 +1,258 @@
+
+:root{
+    --border: .1rem solid rgba(0,0,0,.1);
+    --overlay : #00000070;
+    --modal-btn-border: 1px solid #7e7e7e;
+    --modal-background-color: var(--no-white-background);
+    --btn-background-color: var(--btn-yellow);
+    --btn-background-hover: hsl(209, 99%, 80%)
+}
+/*style voor alle modal's*/
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: var(--border);
+    border-radius: 10px;
+    z-index: 3;
+    background-color: var(--modal-background-color);
+    max-width: 340px;
+    padding: 10px;
+}
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: var(--border);
+    word-break: break-word;
+}
+.modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    width: 60ch;
+}
+.modal-body {
+    padding: 10px 5px;
+}
+.modal-footer{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+}
+.modal-footer button{
+    padding: 0.5em 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    width: auto;
+    background-color: var(--btn-yellow);
+    align-self: center;
+    border: 3px solid black;
+    margin: 5px;
+    border: var(--modal-btn-border);
+}
+.modal-footer button:hover{
+    background-color: var(--btn-background-hover);
+    color: black;
+    cursor: pointer;
+}
+.modal-body input {
+    margin: 5px;
+    height: 2rem;
+    background-color: var(--no-white-background-1);
+    border: var(--modal-btn-border);
+}
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:var(--overlay);
+    pointer-events: none;
+}
+#overlay.active {
+    z-index: 2;
+    opacity: 1;
+    pointer-events: all;
+    cursor: pointer;
+}
+#DBT-maand{
+    margin: 5px;
+}
+#DBT-maand select, #DBT-maand select option{
+    padding: 0 .5rem;
+    width: max-content;
+    height: 2rem;
+    background-color: var(--no-white-background-1);
+    border: var(--modal-btn-border);
+}/*
+#DBT-maand select{
+    max-height: 50px;
+    overflow: scroll;
+}
+*/
+input[type="text"]{
+    padding: 0 .5rem;
+}
+.modal-body input:hover{
+    background-color: var(--c-no-white-background);
+}
+
+/* style for modal-naam*/
+#modal-name .modal-body form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+#modal-name .modal-body input{
+    width: 22em;  /* */
+}
+/* style for modal-geboortedatum*/
+#modal-verjaardag .modal-body form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#modal-verjaardag .modal-body .dag, .dag input{
+    width: 3.5em;
+}
+#modal-verjaardag .modal-body .maand , .maand input{
+    /*width: 10em;*/
+
+}
+#modal-verjaardag .modal-body .jaar, .jaar input{
+    width: 5.5em;
+}
+/* style for modal-gender*/
+#modal-gender .modal-body .radio{
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+}
+#modal-gender .modal-body .radio_input{
+    display: none;
+}
+#modal-gender .modal-body .radio_input:checked + .radio_radio::after{
+    transform: scale(1);
+}
+#modal-gender .modal-body .radio_radio{
+    width: 1.25em;
+    height: 1.25em;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    padding: 2px;
+}
+#modal-gender .modal-body .radio_radio::after{
+    content: "";
+    display: block;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(41, 76, 255, 0.77);
+    transform: scale(0);
+    transition: transform 0.15s;
+}
+/* style for modal-email*/
+#modal-mailaderes .modal-body form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#modal-mailaderes .modal-body #email{
+    max-width: 280px;
+    width: 100%;
+}
+/* style for modal-aderes*/
+#modal-aderes .modal-body form{
+    display: flex;
+    flex-direction: column; justify-content: center;
+}
+#modal-aderes .modal-body #straat{
+    width: 20em;
+}
+#modal-aderes .modal-body #huisnmr{
+    width: 5em;
+}
+#modal-aderes .modal-body #busnmr{
+    width: 5em;
+}
+#modal-aderes .modal-body #postcode{
+    width: 10em;
+}
+#modal-aderes .modal-body #gemeente{
+    width: 21.2em;
+}
+#modal-aderes .modal-body #extra{
+    width: 32.5em;
+}
+/* style for modal-nummer*/
+#modal-telefoonnummer input{
+    width: 20em;
+}
+/* style for modal-wachtwoord*/
+#modal-wachtwoord .modal-body form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/*
+Wachtwoord check message
+ */
+#wachtwoord {
+    width: 200px;
+    padding: 0 .5rem;
+}
+#wachtwoord2 {
+    width: 200px;
+    padding: 0 .5rem;
+}
+#message > h3:nth-child(1){
+    font-size: 14px;
+}
+
+.valid {
+    color: green;
+}
+.valid:before {
+    position: relative;
+    left: -4px;
+    content: "✔";
+}
+.invalid {
+    color: red;
+}
+.invalid:before {
+    position: relative;
+    left: -4px;
+    content: "✖";
+}
+#bevestigWachtwoord{
+    display: none;
+    color: red;
+    position: relative;
+    top: 0;
+    left: 8px;
+}
+
+@media (max-width: 500px) {
+
+
+}

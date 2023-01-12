@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <link rel="stylesheet" href="3_PaymentPage.css">
+  <link rel="stylesheet" href="3_billingAddress.css">
+
+  <script defer src="3_billingAddress.js" type="text/javascript"></script>
+  <link rel="icon" href="../../assets/favicon%20(1).ico">
+
+  <title>Facturatie</title>
+
+  <!-- custom css file link  -->
+
+</head>
+<body>
+<div class="header">
+  <div class="sub-header">
+    <a href="../../Components/P1_OnlyStartPagina/OnlyStartPagina_1.html" class="header-logo">
+      <div>
+        <p class="header-logo-slogan">Huur, Lees & Donneer</p>
+        <p class="header-logo-name" >PAGED</p>
+      </div>
+     <!-- <img id="logoImg" alt="" class="header-logo-img" src="../../assets/logo.png"> -->
+    </a>
+  </div>
+  <div class="small-display-dropdown" id="small-display-content">
+    <a href="../../Components/P1_OnlyStartPagina/OnlyStartPagina_1.html">Start</a>
+    <a href="../../Components/P4_OnlyWinkelPagina/pageByJS_Winkelpagina.html">Winkel</a>
+    <a href="../P6_OnlyContactPagina/ContactPagina_2.html">Contact</a>
+  </div>
+  <div class="top-bar">
+    <p id="naamVanKlant"> </p>
+    <i class="fas fa-user" id="user-icon"></i>
+    <a id="login" href="../P2_OnlyNewUser_Inlog/login.html">Login</a>
+  </div>
+  <div class="account" id="account">
+    <h4>Account</h4>
+    <a href="../P3_AccountPagina/AccountPagina.html">Profiel</a>
+    <a>Orders</a>
+    <a>Account Settings</a>
+    <a id="logout" href="../P1_OnlyStartPagina/OnlyStartPagina_1.html">Logout</a>
+  </div>
+</div>
+
+<div class="container">
+
+  <form>
+    <div class="row">
+
+      <div class="col">
+
+        <h3 class="title">Facturatie adres</h3>
+
+        <div class="inputBox">
+          <span>voor-en achternaam :</span>
+          <input type="text" id="inputVoornaam" class="velden" placeholder="Vin" required>
+          <br><br>
+          <input type="text"  id="inputNaam" class="velden" placeholder="Diesel" required>
+        </div>
+        <div class="inputBox">
+          <span>email :</span>
+          <input type="email" id="inputEmail" class="velden" placeholder="example@example.com" required>
+        </div>
+        <div class="inputBox">
+          <span>Straat:</span>
+          <input type="text" id="inputAdres" class="velden" placeholder="3590-diepenbeek-hazelnotenlaan-5" required>
+        </div>
+
+
+        <div class="flex">
+          <div class="inputBox">
+            <span>Woonplaats:</span>
+            <input type="text" id="inputWoonplaats" class="velden" placeholder="Hasselt" required>
+          </div>
+          <div class="inputBox">
+            <span>postcode:</span>
+            <input type="text" id="inputPostcode" class="velden" placeholder="123 456" required>
+          </div>
+        </div>
+
+          <p id="legeVelden">Vul eerst alle lege velden in</p>
+
+        <div id="divBtnDoorgaan">
+          <button id="btnDoorgaan" type="button">Doorgaan</button>
+          <button id="btnAnnuleren" type="button">Annuleren</button>
+        </div>
+
+      </div>
+
+    </div>
+  </form>
+  <div class="producten-container">
+    <div class="winkelWagen">
+      <h1>My cart</h1>
+    </div>
+    <div  id="producten">
+
+    </div>
+    <div class="product_total">
+      <h3>Total</h3>
+      <p>0</p>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

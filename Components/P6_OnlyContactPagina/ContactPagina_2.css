@@ -1,0 +1,219 @@
+
+/*background color*/
+.contactpagina{
+    background-color: rgba(255, 255, 255, 0.75);
+}
+footer{
+background-color: var(--no-white-background) }
+.belons{
+    background-color: var(--no-white-background);
+}
+
+
+
+
+.contactpagina span{
+    color: var(--darkerblue);
+    font-family: 'Ubuntu', sans-serif;
+    max-width: 30ch;
+}
+.contactpagina{
+    padding: 2.25rem 0;
+}
+
+
+
+.mailons{
+    display: flex;
+    flex-direction: column;
+
+}
+.mailons span{
+    font-size: 3rem;
+    align-self: center;
+    margin: 0 1.5rem;
+    text-align: center;
+}
+.mailons button{
+    align-self: center;
+    font-size: 2rem;
+    padding: .5rem 1rem;
+    background-color: var(--btn-green);
+    border-radius: 2.5em;
+    color: var(--no-white-background-1);
+    margin: 0 0 1rem 0;
+}
+.mailons button:hover{
+    background-color: var(--btn-blue);
+}
+.mailons .form-container form{
+    display: flex;
+    flex-direction: column;
+}
+.mailons .form-container form .form-box {
+    padding: 1.5rem;
+}
+.mailons .form-container form .form-box div{
+    display: flex;
+    gap: 0 3% ;
+}
+.mailons .form-container form .form-box div div{
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.mailons .form-container form .form-box div div label , .mailons .form-container form .form-box__textarea label{
+    font-size: 1.5rem;
+}
+.mailons .form-container form .form-box div div input{
+     outline: none;
+     height: 2.75rem;
+    font-size: 1.25rem;
+    padding: 0 0 0 0.5rem;
+}
+.mailons .form-container form .form-box__textarea{
+    flex-basis: 100%;
+    padding: 1.5rem;
+}
+.mailons .form-container form .form-box__textarea textarea{
+    resize: vertical;
+    flex-basis: 100%;
+    width: 100%;
+    min-height: 10rem;
+    max-height: 18rem;
+    height: auto;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+}
+
+
+.belons{
+    display: grid;
+    grid-template-columns: repeat(1, max-content auto);
+    margin: 1rem 0;
+    padding: 4rem 0 ;
+}
+.belons .dagen-uren{
+    display: flex;
+    flex-direction: column;
+}
+.belons .dagen-uren div{
+    display: grid;
+    grid-template-columns: repeat(1 , 35ch 19ch);
+    align-self: center;
+}
+.belons .dagen-uren span{
+    max-width: 25ch ;
+    font-size: 3rem;
+    margin: 1rem 0;
+    line-height: .85;
+    align-self: center;
+}
+.belons .dagen-uren div p{
+    font-size: 1.75rem;
+    margin: 1rem  0 ;
+}
+.belons .nice-to-meet-you{
+    min-width: 266px;
+    padding: 3.5rem 2.25rem;
+    margin: 0 0 0 6%;
+}
+.belons .nice-to-meet-you span{
+    font-size: 5rem;
+    word-break: break-word;
+    font-family: pop, cursive;
+    line-height: .5;
+    font-weight: bold;
+
+}
+
+.bezoekons{
+    text-align: center;
+}
+.bezoekons span{
+    font-size: 3rem;
+}
+.bezoekons p{
+    font-size: 1.5rem;
+}
+.iframe-box{
+    display: flex;
+    justify-content: center;
+}
+.iframe-box iframe{
+    height: auto;
+    margin: 35px;
+    flex-basis: 100%;
+    aspect-ratio: 1/.5;
+}
+
+
+
+/* responsive*/
+@media screen and (max-width: 600px){
+    .mailons .form-container form .form-box div{
+        flex-direction: column;
+        gap: 0;
+    }
+
+
+
+
+
+
+}
+@media screen and (max-width: 750px) {
+    .belons .nice-to-meet-you{
+        min-width: 200px;
+        padding: 3.5rem 1rem;
+        margin: 0 0 0 3%;
+    }
+    .belons .nice-to-meet-you span{
+        font-size: 4rem;
+    }
+}
+@media  screen and (max-width: 750px) {
+    .belons .nice-to-meet-you{
+        display: none;
+    }
+    .belons .dagen-uren{
+        padding: 0 1.5rem;
+    }
+    .belons {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+@media screen and  (min-width: 1000px){
+    .form-container{
+        width: 80%;
+        align-self: center;
+    }
+    .iframe-box iframe{
+        max-width: 1000px
+    ;}}
+@media screen and (max-width: 485px) {
+    .belons {
+        text-align: center;
+    }
+
+
+    .belons .dagen-uren div {
+        display: flex;
+        flex-direction: column;
+        margin: .5rem 0;
+    }
+
+    .belons .dagen-uren div p {
+        font-size: 1.75rem;
+        margin: 0;
+    }
+}
+
+
+
+
+
+

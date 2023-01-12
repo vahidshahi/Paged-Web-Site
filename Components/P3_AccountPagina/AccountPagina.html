@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../assets/favicon%20(1).ico">
+    <!-- link voor logos die gebruikt worden op de site-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../C1_OnlyHeader/OnlyHeader_1.css">
+    <link rel="stylesheet" href="../C2_OnlyFooter/OnlyFooter_1.css">
+    <link rel="stylesheet" href="OnlyAccountPagina.css">
+    <link rel="stylesheet" href="ModalStyles.css">
+    <!-- JS -->
+    <script defer src="../C1_OnlyHeader/OnlyHeader_1.js"></script>
+    <script defer src="ProfielPagina.js"></script>
+    <script defer src="ModalOpenClose.js"></script>
+    <script defer src="FetchAccount.js"></script>
+    <script defer src="../C1_OnlyHeader/Zoekbalk.js"></script>
+    <script defer src="../C1_OnlyHeader/CheckKlant.js"></script>
+
+</head>
+<body>
+
+<div class="top-bar">
+    <p id="naamVanKlant"> </p>
+    <i class="fas fa-user" id="user-icon"></i>
+    <a id="login" href="../P2_OnlyNewUser_Inlog/login.html">Login</a>
+
+
+    <!-- ../../Components/P2_OnlyNewUser_Inlog/login.html -->
+</div>
+<div class="account" id="account">
+    <h4>Account</h4>
+    <a href="../../Components/P3_AccountPagina/AccountPagina.html">Profiel</a>
+    <a>Orders</a>
+    <a>Account Settings</a>
+    <a id="logout" href="../P1_OnlyStartPagina/OnlyStartPagina_1.html">Logout</a>
+
+</div>
+<header>
+
+    <div class="header">
+        <div class="flex">
+            <!--logo-->
+            <div>
+                <a href="../../Components/P1_OnlyStartPagina/OnlyStartPagina_1.html" class="header-logo">
+                    <div>
+                        <p class="header-logo-slogan">Huur, Lees & Donneer</p>
+                        <p class="header-logo-name" >PAGED</p>
+                    </div>
+                    <img alt="" class="header-logo-img" src="../../assets/logo.png">
+                </a>
+            </div>
+            <div class="flex-column">
+                <div>
+                    <div class="nav icons none-display">
+                        <ul>
+
+                            <li><i class="fas fa-heart"></i></li>
+                            <li><i class="fas fa-user"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav navbar">
+                    <ul>
+                        <li class="big-display"><a href="../../Components/P1_OnlyStartPagina/OnlyStartPagina_1.html">Start</a></li>
+                        <li class="big-display"><a href="../../Components/P4_OnlyWinkelPagina/pageByJS_Winkelpagina.html">Winkel</a></li>
+                        <!--               <li class="big-display" id="accountItem"><a href="../../Components/P2_OnlyNewUser_Inlog/login.html">Account</a></li>-->
+                        <li class="big-display"><a href="../P6_OnlyContactPagina/ContactPagina_2.html">Contact</a></li>
+                        <li class="small-display"><i class="fas fa-bars" id="small-display-btn"></i></li>
+
+                        <li ><a class="fas fa-shopping-cart" href="../P8_WinkelWagenPagina/1_shoppingCart.html"><span>0</span></a></li>
+                        <li><form action="" class="search-form">
+                            <label for="zoekbalk"><i class="fas fa-search" id="zoek-icon"></i></label>
+                            <input  id="zoekbalk" placeholder="hoe kunnen we je helpen?">
+                        </form></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="small-display-dropdown" id="small-display-content">
+        <a href="../../Components/P1_OnlyStartPagina/OnlyStartPagina_1.html">Start</a>
+        <a href="../../Components/P4_OnlyWinkelPagina/pageByJS_Winkelpagina.html">Winkel</a>
+        <a id="small-display-dropdown-accountBtn">Account</a>
+        <a href="../P6_OnlyContactPagina/ContactPagina_2.html">Contact</a>
+    </div>
+</header>
+
+<main class="profiel-pagina">
+<div>
+    <button id="btn-mijn-profiel">Mijn Profiel</button>
+    <button id="btn-mijn-boeken">Mijn Boeken</button>
+    <button id="btn-mijn-geschiedenis">Geschidenis</button>
+</div>
+    <section id="section-profiel-settings" class="profiel_settings">
+        <h3>Mijn account </h3>
+        <div class="infobox-container">
+            <!-- profiel info voornaam , achternaam  -->
+            <div class="infobox">
+                <a data-modal-target="#modal-name">
+                    <div class="gridInButton">
+                        <div class="flex-label">
+                            <div>Mijn naam:</div>
+                        </div>
+                        <div class="flex-input">
+                            <div class="align-content">
+                                <div id="DBI-voornaam"></div>
+                                <div id="DBI-achternaam"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+            <!-- profiel info dag maand jaar  -->
+            <div class="infobox">
+                <a data-modal-target="#modal-verjaardag" >
+                    <div class="gridInButton">
+                        <div class="flex-label">
+                            <div>Mijn geboortedatum:</div>
+                        </div>
+                        <div class="flex-input">
+                            <div class="align-content">
+                                <div id="DBI-geboortedatum"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- profiel info gender  mag weg
+            <div class="infobox">
+                <a data-modal-target="#modal-gender">
+                    <div class="gridInButton">
+                        <div class="flex-label">
+                            <div>Aanspreekvorm</div>
+                        </div>
+                        <div class="flex-input">
+                            <div class="align-content">
+                                <div class="gender"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div> -->
+            <!-- profiel info mailaderes -->
+            <div class="infobox">
+                <a data-modal-target="#modal-mailaderes">
+                    <div class="gridInButton">
+                        <div class="flex-label">
+                            <div>Mijn email:</div>
+                        </div>
+                        <div class="flex-input">
+                            <div class="align-content">
+                                <div id="DBI-mailaderes"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- profiel info aderes : straatnaam , huisnummer , busnummer , postcode , plaatsnaam , -->
+            <div class="infobox _aderes">
+                <a data-modal-target="#modal-aderes">
+                    <div class="gridInButton">
+                        <div class="flex-label">
+                            <div>Mijn aderes:</div>
+                        </div>
+                        <div class="flex-input">
+                            <div class="align-content">
+                                <div id="DBI-straatnaam"></div>
+                                <div id="DBI-Huis_Nmr"></div>
+                                <div id="DBI-busnummer"></div>
+                            </div>
+                            <div class="align-content">
+                                <div id="DBI-postcode"></div>
+                                 <div id="DBI-gemeente"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- profiel info aderes :  extraInfo  -->
+            <div class="infobox _aderes">
+                <a data-modal-target="#modal-extra">
+                    <div class="gridInButton">
+                        <div class="flex-label">
+                            <div>extra info over mij:</div>
+                        </div>
+                        <div class="flex-input">
+                            <div class="align-content _extra">
+                                <div id="DBI-extraInfo"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- profiel info met telefoonnummer -->
+            <div class="infobox">
+                <a data-modal-target="#modal-telefoonnummer" >
+                    <div class="gridInButton">
+                        <div class="flex-label">
+                            <div>Mijn Gsm-nmr:</div>
+                        </div>
+                        <div class="flex-input">
+                            <div class="align-content">
+                                <div id="DBI-telefoonnummer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>    </div>
+            <!-- profiel info wachtwoord wachtwoord  -->
+            <div class="infobox">
+                <a data-modal-target="#modal-wachtwoord">
+                    <div class="gridInButton">
+                        <div class="flex-label">
+                            <div>Mijn wachtwoord:</div>
+                        </div>
+                        <div class="flex-input">
+                            <div class="align-content">
+                                <div id="DBI-wachtwoord"></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>    </div>
+        </div>
+
+
+
+        <!-- modal's en overlay(achtergrond die donkerder word)-->
+        <div>
+            <!--form voor wachtwoord -->
+            <div class="modal" id="modal-wachtwoord">
+                <div class="modal-header">
+                    <div class="title">Wijzig je wachtwoord</div>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <label class="wachtwoord">
+                            <input type="password" id="wachtwoord" placeholder="nieuw wachtwoord" required
+                                   minlength="8"
+                                   autocomplete="off"
+                                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                   title="Moet ten minste één nummer en één hoofdletter and kleine letter bevatten, en  ten minste 8 of meer karakters"/>
+                        </label>
+                        <label class="wachtwoord2">
+                            <input type="password" id="wachtwoord2" placeholder="herhaal nieuw wachtwoord" autocomplete="off"/>
+                        </label>
+                        <small id="bevestigWachtwoord"> Wachtwoord komt niet overeen </small>
+                        <div id="message">
+                            <h3>Password must contain the following:</h3>
+                            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                            <p id="number" class="invalid">A <b>number</b></p>
+                            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <!--form klop en annuleren-->
+                    <button data-close-button-target="#modal-wachtwoord">Annuleren</button>
+                    <button data-save-button-target="DBT-wachtwoord">Opslaan</button>
+                </div>
+            </div>
+            <!--form voor aderes -->
+            <div class="modal" id="modal-aderes">
+                <div class="modal-header">
+                    <div class="title">we hebben je aderes nodig om de boeken te kunnen leveren </div>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div>
+                            <label class="straat">
+                                <input autocomplete="on"  type="text" id="DBT-straat" placeholder="straatnaam"/>
+                            </label>
+                            <label class="huisnmr">
+                                <input autocomplete="on" type="text" id="DBT-huisnmr" placeholder="huisNr"/>
+                            </label>
+                            <label class="busnmr">
+                                <input autocomplete="on"  type="text" id="DBT-busnmr" placeholder="busNr"/>
+                            </label>
+                        </div>
+
+                        <div>
+                            <label class="postcode">
+                                <input autocomplete="on"  type="text" id="DBT-postcode" placeholder=" postcode"/>
+                            </label>
+                         <label class="gemeente">
+                                <input autocomplete="on"  type="text" id="DBT-gemeente" placeholder=" gemeente"/>
+                            </label>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <!--form klop en annuleren-->
+                    <button data-close-button-target="#modal-aderes">Annuleren</button>
+                    <button data-save-button-target="DBT-aderes">Opslaan</button>
+                </div>
+            </div>
+            <!--form voor extra info -->
+            <div class="modal" id="modal-extra">
+                <div class="modal-header">
+                    <div class="title">is er iets waar we rekening me moeten houden?</div>
+                </div>
+                <div class="modal-body">
+                    <label class="extra">
+                        <input type="text" id="DBT-extraInfo" placeholder=" extra info"/>
+                    </label>
+                </div>
+                <div class="modal-footer">
+                    <!--form klop en annuleren-->
+                    <button data-close-button-target="#modal-extra">Annuleren</button>
+                    <button data-save-button-target="DBT-extraKlantenInfo">Opslaan</button>
+                </div>
+            </div>
+            <!--form voor telefoonnummer -->
+            <div class="modal" id="modal-telefoonnummer">
+                <div class="modal-header">
+                    <div class="title">je nummer kan worden gebruikt om belangrijke meldingen te sturen, je te helpen inloggen en meer  </div>
+                </div>
+                <div class="modal-body">
+                    <label class="tell">
+                        <input type="text" id="DBT-gsmnr" placeholder=" telefoonnummer"/>
+                    </label>
+                </div>
+                <div class="modal-footer">
+                    <!--form klop en annuleren-->
+                    <button data-close-button-target="#modal-telefoonnummer">Annuleren</button>
+                    <button data-save-button-target="DBT-gsmnr">Opslaan</button>
+                </div>
+            </div>
+            <!--form voor mail aderes -->
+            <div class="modal" id="modal-mailaderes">
+                <div class="modal-header">
+                    <div class="title">Waar wil je informatie ontvangen over jouw bestellingen?</div>
+                </div>
+                <div class="modal-body">
+                    <label class="email">
+                        <input type="text" id="DBT-email" placeholder=" e-mail"/>
+                    </label>
+                    <!--<label class="radio">
+                        <input type="checkbox" name="4" id="ja-nieuws">
+                        <div class="checkbox-text">Ja Ik will de laatste nieuwtjes<br>ontvangen via mail</div>
+                    </label> -->
+                </div>
+                <div class="modal-footer">
+                    <!--form klop en annuleren-->
+                    <button data-close-button-target="#modal-mailaderes">Annuleren</button>
+                    <button data-save-button-target="DBT-emailaderes">Opslaan</button>
+                </div>
+            </div>
+            <!--form voor gender
+            <div class="modal" id="modal-gender">
+                <div class="modal-header">
+                    <div class="title">je gender kan worden gebruikt voor personalisatie op Page-services
+                        <br> bevoorbeeld op te bepalen hoe we je aanspreken </div>
+                </div>
+                <div class="modal-body">
+                    <label for="man" class="radio">
+                        <input type="radio" name="1" id="man" class="radio_input">
+                        <div class="radio_radio"></div>man
+                    </label>
+                    <label for="vrouw" class="radio">
+                        <input type="radio" name="1" id="vrouw" class="radio_input">
+                        <div class="radio_radio"></div>vrouw
+                    </label>
+                    <label for="onknow" class="radio">
+                        <input type="radio" name="1" id="onknow" class="radio_input">
+                        <div class="radio_radio"></div>zeg ik liever niet
+                    </label>
+                </div>
+                <div class="modal-footer">
+
+                    <button data-close-button-target="#modal-gender">Annuleren</button>
+                    <button data-save-button-target="modal-gender">Opslaan</button>
+                </div>
+            </div> -->
+            <!--form voor verjaardag -->
+            <div class="modal" id="modal-verjaardag">
+                <div class="modal-header">
+                    <div class="title">je geboortendatum wordt gebruikt door Paged
+                        om boeken aan te raden volgens leeftijd</div>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <!--dag-->
+                        <label class="dag">
+                            <input type="text" id="DBT-dag" placeholder="Dag"/>
+                        </label>
+                        <!--maand-->
+                            <div type="text" id="DBT-maand"></div>
+
+                        <!--Jaar-->
+                        <label class="jaar">
+                            <input type="text" id="DBT-jaar" placeholder="Jaar"/>
+                        </label>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <!--form klop en annuleren-->
+                    <button data-close-button-target="#modal-verjaardag">Annuleren</button>
+                    <button data-save-button-target="DBT-geboortedatum">Opslaan</button>
+                </div>
+            </div>
+            <!--form voor de voornaam en achternaam-->
+            <div class="modal" id="modal-name">
+                <div class="modal-header">
+                    <div class="title">wijzigingen in je naam worden overal in je -Paged-account getoont.</div>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <!-- voornaam-->
+                        <label>
+                            <input type="text" id="DBT-voornaam" placeholder="voornaam"/>
+                        </label>
+                        <!--achternaam-->
+                        <label>
+                            <input type="text" id="DBT-achternaam" placeholder="achternaam"/>
+                        </label>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <!--form klop en annuleren-->
+                    <button data-close-button-target="#modal-name">Annuleren</button>
+                    <button data-save-button-target="DBT-name">Opslaan</button>
+                </div>
+            </div>
+        </div>
+        <div id="overlay"></div>
+    </section>
+    <section id="section-mijn-boeken" class="geleende-boeken">
+        <h3>mijn boekenplank</h3>
+    </section>
+    <section id="section-mijn-geschiedenis" class="mijn-boeken">
+        <h3>mijn bestel geschiedenis</h3>
+    </section>
+</main>
+
+
+<footer>
+    <div class="footer-box-container">
+        <!--ons  logo en slogo , links social media  -->
+        <div class="box  footerlogo">
+            <h3> Paged <img class="logo-img" src="../../assets/logo.png" alt=""> </h3>
+            <p>Lees, Huur & Doneeer</p>
+            <div class="share">
+                <a href="https://www.facebook.com" class="fab fa-facebook-f"></a>
+                <a href="https://www.twitter.com" class="fab fa-twitter"></a>
+                <a href="https://www.instagram.com" class="fab fa-instagram"></a>
+                <a href="https://www.linkedin.com" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+        <!-- ons  telefoon nummer , email , aderes -->
+        <div class="box contactlinks">
+            <h3>Contact info</h3>
+            <a href="../../Components/P6_OnlyContactPagina/ContactPagina_2.html" class="links"> <i class="fas fa-phone"></i>+32 478 20 45 86 </a>
+            <a href="mailto:info@paged.be" class="links"> <i class="fas fa-envelope"></i>info@paged.be  </a>
+            <a href="https://www.google.com/maps/place/Hasseltweg+4,+3600+Genk" class="links"><i class="fas fa-map-marker-alt"></i>Hasseltweg 4
+                <br>3600 Genk</a>
+        </div>
+
+        <!-- openingsuen -->
+        <div class="box openingsuren">
+            <h3>Openingsuren</h3>
+            <div class="grid-openingsuren">
+                <div class="box-days">
+                    <p><span>W</span>oensdag tot
+                        <span>V</span>rijdags</p>
+                    <span class="openings-day">10.30 - 17.30</span>
+
+                    <p><span>M</span>aandag en
+                        <span>Z</span>aterdag</p>
+                    <span class="openings-day">13.30 - 16.00</span>
+
+                    <p><span>D</span>insdag en
+                        <span>Z</span>ondag</p>
+                    <span class="openings-day">Gesloten</span>
+                </div>
+
+            </div>
+        </div>
+        <!-- links-->
+        <div class="box navigeer">
+            <h3>Navigeer</h3>
+            <a href="../../Components/P1_OnlyStartPagina/OnlyStartPagina_1.html" class="links"> <i class="fas fa-arrow-right"></i>Start</a>
+            <a href="../../Components/P4_OnlyWinkelPagina/pageByJS_Winkelpagina.html" class="links"> <i class="fas fa-arrow-right"></i>Winkel</a>
+            <a id="account-btn-footer"  class="links"> <i class="fas fa-arrow-right"></i>Account</a>
+            <a href="../../Components/P1_OnlyStartPagina/Doneer.html" class="links"> <i class="fas fa-arrow-right"></i>Doneer</a>
+            <a href="../../Components/P7_OnlyRechtenPagina/OnlyRechtenPagina_1.html" class="links"> <i class="fas fa-arrow-right"></i>Rechten</a>
+        </div>
+
+
+    </div>
+
+    <div class="credit">Gemaakt door<span>Team 4</span></div>
+
+</footer>
+
+</body>
+</html>

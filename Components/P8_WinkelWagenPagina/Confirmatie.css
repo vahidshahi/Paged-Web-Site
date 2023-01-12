@@ -1,0 +1,105 @@
+
+
+*{
+    box-sizing: border-box;
+}
+img{
+    width: 80px;
+}
+#logout{
+    display: none;
+}
+#signIn:hover{
+    color:  #000dff;
+    cursor: pointer;
+}
+/* Account after login*/
+.account{
+    background: orange;
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    width: 150px;
+    right: 0;
+    z-index: 2000;
+    top: 60px;
+    font-size: 15px;
+}
+.account a, h4{
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+
+}
+#naamVanKlant:hover{
+    cursor: pointer;
+    margin: 0 5px 0;
+}
+#user-icon{
+    margin: 0 5px 0;
+}
+.none-display{
+    display: none;
+}
+.winkelcar-icon{
+}
+.small-display{
+    display: none;
+}
+.header {
+    display: flex;
+    padding: 25px;
+    justify-content: space-around;
+    align-items: baseline;
+
+}
+.sub-header {
+    flex: 0;
+}
+.sub-header a{
+    text-decoration: none;
+}
+.header-logo {
+    display: flex;
+}
+.header-logo-slogan {
+    font-size: 0.8em;
+    text-align: center;
+}
+.header-logo-name {
+    font-size: 1.65em;
+}
+.header-logo-name, .header-logo-slogan {
+    font-weight: bolder;
+    color: var(--darkblue);
+    font-family: "Times New Roman", serif;
+}
+.header-logo-name {
+    font-size: 1.65em;
+}
+#logoImg{
+    width: 100px;
+    height: 100px;
+}
+.top-bar p:nth-child(1){
+    background-color: #2ecc71;
+}
+
+
+.content{
+    text-align: center;
+}
+
+#doorgaan{
+    background-color: #2ecc71;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#small-display-content a {
+    text-decoration: none;
+}
+#small-display-content{
+    font-size: 24px;
+    text-decoration: none;
+}

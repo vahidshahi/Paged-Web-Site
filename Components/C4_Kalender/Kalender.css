@@ -1,0 +1,131 @@
+
+main{
+    width: 400px;
+}
+
+/*Kalender */
+.container{
+    --SelectedFurstLastDay : gray;
+    --SelectedDays : #b4b2b2;
+    --BoekRendedDays : rgb(217, 72, 90);
+    --BoekRendedFurstLastDay : #b70419;
+    --color2: #E1E1E1;
+    display: flex;
+    padding: 1.25rem;
+
+
+}
+.container>*{
+    flex-grow: 1;
+    flex-basis: 100%;
+    flex-shrink: 1;
+}
+.kalender{
+    text-align: center;
+    min-width: 400px;
+
+    aspect-ratio: 1/1;
+
+}
+.kalender--top{
+    display: flex;
+    justify-content: center;
+    aspect-ratio: 1/.25;
+    align-items: center;
+    background-color: lightblue;
+    position: relative;
+}
+.kalender--btn {
+    width: var(--width-btn);
+    font-size: 3rem;                              /***/
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgba(210, 209, 209, 0.77);;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.kalender-months{
+    font-size: 5rem;
+    width: 100%;
+
+}
+.kalender-months div{
+    max-width: 100%;
+    flex: 0 0 100%;
+    font-size: 2.25rem;                     /***/
+
+}
+.btn--right{
+    right: 0;
+}
+.btn--left{
+    left:0;
+}
+.kalender--bottom{
+    aspect-ratio: 1/0.75;
+    background-color: #C5DCE7FF;
+}
+.kalender-weekday {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border-bottom: 2px solid black;
+}
+.kalender-days{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    aspect-ratio: 1/.75;
+
+}
+.kalender-days div,
+.kalender-weekday div{
+    font-size: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold ;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin: 0.25em;
+}
+/* classes van de dagen */
+.boekRendedDays{
+    background-color: var(--BoekRendedDays);
+    color: black;
+}
+.boekRendedFurstLastDay{
+    background-color: var(--BoekRendedFurstLastDay);
+    color: white;
+}
+.clicked{
+    background-color: blue;
+    color: white;
+}
+.selectedDays{
+    background-color: var(--SelectedDays);
+    color: black;
+}
+.selectedFurstLastDay{
+    background-color: var(--SelectedFurstLastDay);
+    color: white;
+}
+.today{
+    background-color: #ffb700;
+    border: 3px solid black;
+    color: black;
+}
+.beforeToday{
+    color: gray;
+}
+.boekRendedDays.beforeToday{
+    background-color: var(--BoekRendedDays);
+    opacity: 75%;
+}
+.boekRendedFurstLastDay.beforeToday{
+    background-color: var(--BoekRendedFurstLastDay);
+    opacity: 75%;
+}

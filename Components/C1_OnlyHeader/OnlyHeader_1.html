@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paged Lees, Huur & Doneer</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="OnlyHeader_1.css">
+    <!-- JS -->
+    <script defer src="OnlyHeader_1.js"></script>
+    <script defer src="Zoekbalk.js"></script>
+    <script defer src="CheckKlant.js"></script>
+</head>
+<body>
+<div class="top-bar">
+    <p id="naamVanKlant"> </p>
+    <i class="fas fa-user" id="user-icon"></i>
+    <a id="login" href="../P2_OnlyNewUser_Inlog/login.html">Sign In</a>
+    <a id="logout" href="../P1_OnlyStartPagina/OnlyStartPagina_1.html">Log out</a>
+
+    <!-- ../../Components/P2_OnlyNewUser_Inlog/login.html -->
+</div>
+<div class="account" id="account">
+    <h4>Account</h4>
+    <a href="../P3_AccountPagina/AccountPagina.html">Profiel</a>
+    <a>Orders</a>
+    <a>Account Settings</a>
+</div>
+
+<header>
+
+    <div class="header">
+        <div class="flex">
+            <!--logo-->
+            <div>
+                <a href="../../Components/P1_OnlyStartPagina/OnlyStartPagina_1.html" class="header-logo">
+                    <div>
+                        <p class="header-logo-slogan">Huur, Lees & Donneer</p>
+                        <p class="header-logo-name" >PAGED</p>
+                    </div>
+                    <img alt="" class="header-logo-img" src="../../assets/logo.png">
+                </a>
+            </div>
+            <div class="flex-column">
+                <div>
+                    <div class="nav icons none-display">
+                        <ul>
+
+                            <li><i class="fas fa-heart"></i></li>
+                            <li><i class="fas fa-user"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav navbar">
+                    <ul>
+                        <li class="big-display"><a href="../P1_OnlyStartPagina/OnlyStartPagina_1.html">Start</a></li>
+                        <li class="big-display"><a href="../P4_OnlyWinkelPagina/pageByJS_Winkelpagina.html">Winkel</a></li>
+                        <!--               <li class="big-display" id="accountItem"><a href="../../Components/P2_OnlyNewUser_Inlog/login.html">Account</a></li>-->
+                        <li class="big-display"><a href="../P6_OnlyContactPagina/ContactPagina_2.html">Contact</a></li>
+                        <li class="small-display"><i class="fas fa-bars" id="small-display-btn"></i></li>
+
+                        <li ><a class="fas fa-shopping-cart" href="../P8_WinkelWagenPagina/1_shoppingCart.html"><span>0</span></a></li>
+                        <li><form action="" class="search-form">
+                            <label for="zoekbalk"><i class="fas fa-search" id="zoek-icon"></i></label>
+                            <input  id="zoekbalk" placeholder="hoe kunnen we je helpen?">
+                        </form></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="small-display-dropdown" id="small-display-content">
+        <a href="../P1_OnlyStartPagina/OnlyStartPagina_1.html">Start</a>
+        <a href="../P4_OnlyWinkelPagina/pageByJS_Winkelpagina.html">Winkel</a>
+        <a  id="small-display-dropdown-accountBtn">Account</a>
+        <a href="../P6_OnlyContactPagina/ContactPagina_2.html">Contact</a>
+    </div>
+</header>
+
+<main>
+
+</main>
+
+
+</body>
+</html>

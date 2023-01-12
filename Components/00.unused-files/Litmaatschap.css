@@ -1,0 +1,35 @@
+
+.info-lidmaatschap{
+    margin-top: 1rem;
+    background-color: var(--c-no-white-background);
+}
+.info-lidmaatschap h1{
+    font-size: 3rem;
+    text-align: center;
+}
+.voor-wie, .voorwaarden , .wat-hebben-we-nodig{
+    overflow: hidden;
+    padding: 1rem;
+    margin: 1rem;
+}
+.voor-wie h3, .voorwaarden h3, .wat-hebben-we-nodig h3 {
+     font-size: 1.5rem;
+}
+.voor-wie p, .voorwaarden p , .wat-hebben-we-nodig p{
+    margin: 0.5rem;
+    max-width: 62ch;
+    line-height: 1.3;
+    font-size: 1.35rem;
+    opacity: 90%;
+}
+.voorwaarden a{
+    color: var(--btn-blue);
+}
+.voorwaarden a:hover{
+    color: var(--btn-red);
+}
+
+
+section{
+    --section-padding-bottom: 1rem;
+}

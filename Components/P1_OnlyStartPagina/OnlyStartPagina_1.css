@@ -1,0 +1,591 @@
+
+:root{
+    --button-position-right: 3%;
+    --button-position-bottom:  3%;
+    --yellow:hsl(36, 91%, 56%);
+    --blue: hsl(211, 91%, 50%);
+    --no-white-background: hsl(200, 42%, 94%);
+    --section-padding-top: 3.5rem;
+    --section-padding-right: 3% ;
+    --section-padding-bottom: 6rem ;
+    --section-padding-left: 3%;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    /*outline: 1px solid firebrick;*/
+
+}
+
+body {
+    /*background-image: url("../../assets/background.jpg");*/
+    background-image: unset;
+
+}
+
+
+main{
+   min-height: 750px;
+}
+.header, footer, .small-display-dropdown{
+    margin-bottom: 0;
+    background-color: var(--no-white-background);
+}
+.header{
+    border-bottom: none;
+}
+
+/* style voor alle sections */
+section{
+    --section-padding-top: 3.5rem;
+    --section-padding-right: 3% ;
+    --section-padding-bottom: 6rem ;
+    --section-padding-left: 3%;
+    padding: var(--section-padding-top) var(--section-padding-right) var(--section-padding-bottom) var(--section-padding-left);
+}
+section .heading{
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.25rem;
+}
+section .slogan{
+    font-family: pop, cursive;
+    font-size: 1.25rem;
+}
+section .text{
+    max-width: 500px;
+}
+section .box-container{
+    display: flex;}
+.box{
+    flex: 1;
+}
+/* drop down  */
+.winkelcar{
+    display: block;
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    background-color: #000dff;
+    top: 153px;
+    z-index: 1;
+    right: 234px;
+}
+
+#winkelcar-icon:hover{
+    display: block;
+}
+.winkelcar p{
+    font-size: 20px;
+}
+#naamVanKlant{
+    display: none;
+}
+/* section nieuwsgrierig */
+.blijf-nieuwsgierig{
+    background-color:  var(--yellow);
+    border: 2px solid gray;
+    border-left: none;
+    border-right: none;
+    position: relative;
+    min-height: 17rem;
+}
+.blijf-nieuwsgierig div{
+    color: var(--blue);
+}
+.blijf-nieuwsgierig a{
+    right:  var(--button-position-right);
+    bottom: var(--button-position-bottom);
+    position: absolute;
+    background-color: var(--blue) ;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.75rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5em;
+    color: var(--yellow);
+}
+.blijf-nieuwsgierig a:hover{
+    outline: 2px solid var(--blue);
+    background-color:  var(--yellow) ;
+    color:  var(--blue);
+}
+
+
+/* section over ons */
+.over-ons{
+    background-color: var(--no-white-background);
+    text-align: left;
+    position: relative;
+    padding: 0;
+}
+.over-ons .heading, .donneer .heading{
+    letter-spacing: normal;
+    font-family: 'Poppins', sans-serif;
+}
+.over-ons .slogan{
+   margin: 1rem 0;
+}
+.over-ons .slogan span{
+   color: var(--blue);;
+}
+.text p{
+    font-family: "Droid Sans Mono Dotted", sans-serif;
+    font-size: 1.25rem;
+    word-break: break-word;
+    line-height: 1.5em;
+    padding: 5% 0;
+
+}
+.over-ons .box-container .left{
+     width: 30%;
+     overflow: hidden;
+     margin: 1rem ;
+     border-left: var(--border);
+ }
+
+.over-ons .box-container>div:not(.left){
+    padding: 5rem 1rem 0 1rem;
+
+}
+.over-ons img{
+    max-width: 550px;
+    height: auto;
+}
+.over-ons .box-container .left{
+    display: none;
+}
+
+/*section maak een account aan */
+.maak-een-account{
+    background-color: hsl(203, 49%, 26%);;
+    padding-bottom: 2rem;
+}
+.maak-een-account .box{
+    position: relative;
+    min-height: 8rem;
+}
+.maak-een-account .heading{
+    transform: translateY(-70%);
+    text-transform: uppercase;
+    color: hsl(23, 49%, 90%);
+    padding: 0;
+}
+.maak-een-account p{
+    font-size: 1.75rem;
+    word-break: break-word;
+    color:  hsl(23, 49%, 90%);
+    margin: 0;
+    padding: 2% 0;
+
+}
+.maak-een-account a{
+    right:  var(--button-position-right);
+    bottom: var(--button-position-bottom);
+    position: absolute;
+    background-color:  hsl(23, 49%, 90%) ;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.75rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5em;
+    color: hsl(203, 49%, 26%);
+    width: max-content;
+}
+.maak-een-account a:hover{
+    outline: 2px solid  hsl(23, 49%, 90%);
+    background-color:  hsl(203, 49%, 26%) ;
+    color:   hsl(23, 49%, 90%);
+}
+.maak-een-account .box-container .left{
+    display: none;
+    padding: 0;
+    justify-self: left;
+}
+
+/*section Donneer */
+.donneer{
+    background-color: var(--yellow);
+    position: relative;
+}
+.donneer .heading{
+    color: var(--blue);
+}
+.donneer p{
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.donneer a {
+    right: var(--button-position-right);
+    bottom: calc(var(--button-position-bottom) + 10%);
+    position: absolute;
+    background-color: var(--blue);
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.75rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5em;
+    color: var(--yellow);}
+.donneer a:hover{
+    border: 3px solid var(--blue);
+    background-color:  var(--yellow) ;
+    color:  var(--blue);
+}
+/* section word lid */
+.word-lid{
+    background-color: var(--c-no-white-background);
+    --section-padding-top: calc(3.5rem + 3rem);
+    --section-padding-bottom: 6rem ;
+    padding: var(--section-padding-top) var(--section-padding-right) var(--section-padding-bottom) var(--section-padding-left);
+
+}
+.word-lid .heading{
+    color: var(--darkblue);
+    margin-bottom: 4rem;
+    line-height: 0.8;
+    font-size: 1.75rem;
+    letter-spacing: 0.15rem;
+    font-weight: bold;
+}
+.word-lid .abonnement{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, auto);
+}
+.word-lid .abonnement a{
+    background-color: transparent;
+    border: 3px dotted var(--blue);
+    font-size: 1rem;
+    padding: 0.25em 0.5em;
+    margin: 1rem ;
+    color: var(--darkblue);
+    text-align: center;
+}
+.word-lid .abonnement a div{
+    font-size: 1.5rem;
+}
+.word-lid .abonnement a:hover{
+    border: 3px dotted var(--btn-red);
+    cursor: pointer;
+    color: hsl(203, 49%, 26%);
+}
+
+#message h3:nth-child(1){
+    font-size: 14px;
+}
+/*
+Top vijf boeken style
+
+ */
+.topvijfBoeken{
+    margin-top: 25px;
+    font-family: 'Roboto', sans-serif;
+
+}
+.topVijfNederlandseBoeken{
+    box-sizing: border-box;
+    justify-content: center;
+    display: flex;
+    background: white;
+    padding: 3%;
+    flex-wrap: wrap;
+}
+.boek{
+    background: white;
+    margin: 0 25px;
+}
+.boek img{
+    width: 120px;
+
+}
+.boek .titel_boek{
+    text-wrap: normal;
+    font-size: 17px;
+    width: 12vw;
+}
+.boek p{
+    font-size: 12px;
+}
+.boek span{
+    font-size: 12px;
+}
+.isIngelogde, .isDisplay{
+  display: none;
+}
+.boekDiv{
+    text-align: center;
+}
+.boekDiv:hover{
+    transform: translateY(15);
+}
+.naarAlleBoeken {
+}
+.container-header{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.naarAlleBoeken{
+    background-color: #2ecc71;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 50px;
+    color: black;
+    text-decoration: none;
+
+}
+.container-header h4{
+    font-size: 25px;
+    flex: 1;
+}
+.container-header img{
+    width: 50px;
+}
+#boek2 > div:nth-child(1) > img:nth-child(1) {
+    width: 129px;
+}
+/* Slideshow container */
+.slide-show-categorieën{
+    background-color: white;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 315px;
+}
+.slide-show-categorieën h3{
+    background-color: #2ecc71;
+    display: inline-block;margin-left: 25px;
+    padding: 10px;
+    color: white;
+}
+.slide-show-sub-con {
+    position: relative;
+
+}
+.mySlides img{
+    max-height: 250px;
+    max-width: 250px;
+}
+.imgSlideShow{
+    width: 200px;
+}
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 2.5s;
+}
+.mySlides {
+    display: none;
+    text-align: center;
+   max-height: 200px;
+}
+img {vertical-align: middle;}
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@media (max-width: 500px) {
+    .boek .titel_boek{
+        width: 40vw;
+    }
+    .boekDiv {
+        margin: 25px;
+    }
+}
+
+/* responsive*/
+
+@media (max-width: 540px) {
+    .donneer a{
+        right: var(--button-position-right);
+        bottom: var(--button-position-bottom);
+    }
+    .over-ons img{
+        display: none;
+    }
+    section .box-container {
+        display: block;
+    }
+    section .box-container .left{
+        display: none
+    }
+    .text p{
+        max-width: 35ch;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+    section{
+        --section-padding-top: 3.5rem;
+        --section-padding-right: 2rem ;
+        --section-padding-bottom: 6rem ;
+        --section-padding-left: 2rem;
+    }
+    .over-ons .box-container>div:not(.left) {
+        padding: 2rem 2rem 2rem 2rem;
+    }
+}
+@media (min-width: 500px) {
+    .word-lid .abonnement{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+    .over-ons .box-container .left{
+        display: block;
+        width: 20%;
+    }
+}
+@media (min-width: 720px) {
+    section{
+        --section-padding-right: 5% ;
+        --section-padding-left: 5%;
+    }
+    section .heading {
+        font-size: 2.5rem;
+    }
+    .word-lid .heading{
+        font-size: 2rem;
+
+    }
+    .maak-een-account .heading {
+        font-size: 2rem;
+    }
+    section .slogan{
+        font-size: 1.75rem;
+    }
+    .blijf-nieuwsgierig a, .maak-een-account a{
+        --button-position-right: 5%;
+        --button-position-bottom:  15%;
+    }
+    .over-ons {
+
+    }
+    .over-ons p, section p{
+        font-size: 1.35rem;}
+    .word-lid .abonnement{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, auto);
+    }
+    .over-ons .box-container .left{
+        display: block;
+        width: 20%;
+    }
+
+}
+@media (min-width: 950px) {
+    .maak-een-account .box-container .left{
+        display: block;
+    }
+    .maak-een-account .box-container{
+        display: grid;
+        grid-template-columns: repeat(1 , auto max-content);
+        justify-items: end;
+    }
+    .maak-een-account .heading{
+        font-size: 2rem;   transform: translateY(60%);
+    }
+    .maak-een-account a{
+        right: var(--button-position-right);
+        bottom: var(--button-position-bottom);
+        position: absolute;
+    }
+    .isDisplay{
+        display: block;
+    }
+.isIngelogde{
+    display: contents;
+    transform: translateY(-50%);
+    text-align: center;
+}
+    .over-ons .box-container .left{
+        display: block;
+        width: 30%;
+    }
+}
+@media (min-width: 1000px) {
+    section{
+        --section-padding-right: 8% ;
+        --section-padding-left: 8%;
+    }
+    section .heading {
+        font-size: 3rem;
+    }
+    section .slogan{
+        font-size: 2.25rem;
+    }
+    .blijf-nieuwsgierig a{
+        --button-position-right: 8%;
+        --button-position-bottom:  20%;
+        font-size: 2rem;
+    }
+    .text p, section p{
+        font-size: 1.7rem;}
+    .maak-een-account .heading{
+        font-size: 2.5rem;
+    }
+    .word-lid .heading{
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    .donneer a {
+        text-align: center;
+        left : 60%;
+        bottom: 50%;
+        position: absolute;
+        background-color: var(--blue);
+        cursor: pointer;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 2rem;
+        padding: 2rem 0 ;
+        font-family: Consolas , serif;
+        border-radius: 0.5em;
+        color: var(--yellow);
+    }
+}
+@media (min-width: 1091px) {
+    section{
+        --section-padding-right: 8% ;
+        --section-padding-left: 8%;
+    }
+    section .heading {
+        font-size: 3rem;
+    }
+    section .slogan{
+        font-size: 2.25rem;
+    }
+    .blijf-nieuwsgierig a{
+        --button-position-right: 8%;
+        --button-position-bottom:  20%;
+    }
+    .text p, section p{
+        font-size: 1.7rem;}
+    .maak-een-account .heading{
+        font-size: 2.5rem;
+    }
+    .word-lid .heading{
+        font-size: 2.5rem;
+    }
+    .donneer a {
+        right: 8%; ;
+        bottom: 30%;
+    }
+}
+@media (min-width: 1700px) {
+    .over-ons .box-container .left{
+        display: block;
+        width: 565px;
+    }
+
+}
